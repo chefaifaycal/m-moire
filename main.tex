@@ -1,0 +1,1034 @@
+\documentclass[french]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fourier}
+\usepackage{babel}
+\usepackage{graphicx}
+\usepackage[x11names, table]{xcolor}
+\usepackage{float}
+\usepackage{csquotes}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{biblatex}
+\addbibresource{Biblio.bib}
+
+\newcommand\rmq[1]{\textcolor{red}{\tt #1}}
+
+\title{Mémoire Master}
+\author{faycalchefai1 }
+\date{September 2021}
+
+\begin{document}
+%Page de garde
+
+
+\begin{titlepage}
+\begin{center}
+    \large{République Algérienne Démocratique et Populaire}\\
+    \large{Ministère de l'Enseignement Supérieur et de la Recherche Scientifique}\\
+    \large{Université A. Mira de Bejaia}\\
+    \large{Faculté des Sciences Exactes}\\
+    \large{Département d'Informatique}\\
+
+    \begin{figure}[h!]
+    \centering
+    \includegraphics[width=6cm]{images/logo1.jpg}
+    \end{figure}
+	
+    \LARGE{\textbf{Mémoire de Fin de Cycle}} \\[2ex]
+     En vue de l'obtention du diplôme de Master en Informatique \\[1ex]
+    
+    \textit{\textbf{Thème}}\\[1ex]
+	\rule{11,5cm}{1pt}
+    {\LARGE{\textbf{{\\Conception et réalisation d'une application Web d'offres
+    de services professionnels \\}}}}
+	\rule{11,5cm}{1pt}\\
+	\vspace{0.2cm}
+\end{center}
+
+\begin{center}
+    \large Réalisé par
+
+    \paragraph{}
+
+    \begin{tabular}{l l l l}	
+        M. CHEFAI Fayçal & & & M. BORDJIHANE Sami \\
+    \end{tabular}
+
+    \large Devant le jury composé de
+\end{center}
+\paragraph{}
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{l l l }
+     & Promotion 2020 - 2021 &	\\
+    \end{tabular}    
+\end{table}
+\end{titlepage}
+
+%Fin de page de garde
+
+\tableofcontents
+\listoffigures
+\listoftables
+
+
+%Début introduction
+\chapter*{Introduction Générale}
+
+De nos jours, Internet a pris un grand élan dans notre vie. Avant il n'était
+destinée qu'aux experts et aux grandes entreprises. Aujourd'hui, il est
+devenue indispensable et offre des services dans tous les domaines. Internet
+permet aux entreprises ou même aux boutiques d'offrir leurs services afin de
+mieux répondre aux besoins de ses clients. Dans notre projet, nous nous
+intéressons à la gestion de ces services.  En effet, dans notre vie quotidienne,
+lors de la recherche d'une personne professionnelle (ou compétente) dans un
+domaine   nous rencontrons beaucoup de difficultés, par exemple : les
+informations, les contacts. Ce qui  peut engendrer une perte de temps et
+d'argent. Pour pallier ces problèmes, nous avons créé  et développé une
+application web dynamique de gestion d'offres des services. A travers cette
+application, on regroupe plein de gens compétents qui peuvent partager leurs
+travaux et leurs contacts. Ainsi, toute personne pourra consulter ou bien
+acheter des services. 
+
+Notre choix de développer une application web, se justifie par le fait qu'elle
+est un moyen très utile et efficace pour exposer et offrir des services aux
+internautes via internet grâce à l'accessibilité qu'elle offre aux utilisateurs
+ou bien les clients indépendamment de leurs emplacements physiques, ce qui nous
+permettra de rapprocher les fournisseur et les clients.  Dans le présent rapport,
+nous allons présenter les différentes étapes que nous avons suivies lors du
+développement de notre application web. Notamment, la démarche suivie, les
+diagrammes conçus, ainsi que les différents langages et outils utilisés. Enfin, 
+nous clôturons ce travail avec une conclusion générale et quelques
+perspectives qui permettront d'améliorer notre solution.
+
+\rmq{Développez davantage cette introduction générale. Illustrez, donnez des
+exemples, \ldots Vous avez l'obligation d'intéresser le lecteur et de le
+convaincre de l'utilité de votre travail.}
+
+%Fin introduction
+
+
+%Début du chapitre 1
+\chapter{Étude Préalable}
+\section{Introduction}
+De nos jours les désirs ne sont plus comme avant (\rmq{reformulez}), aujourd'hui
+nous nous focalisons sur la réalisation des besoins efficacement en un temps
+minimal. C'est pour cela que nous optons pour les applications qui offrent des
+services en ligne sans avoir à se déplacer ni à perdre beaucoup de temps et
+d'argent.  Dans le cadre de notre travail, nous nous focalisons sur la gestion
+d'offre de services en ligne, notamment sur la publication des services.
+L'objectif principal est de faciliter la tâche à l'internaute concernant ses
+informations, ses contacts, ses achats,  etc.
+
+\section{Identification de la problématique}
+
+Le problème que rencontre beaucoup de gens dans leurs vie quotidienne, est la
+recherche de professionnels compétents. En outre, ils ont essentiellement besoin
+d'informations telles que:
+
+\begin{itemize}
+    \item Contacts de professionnels.
+    \item Tarifs usités.
+    \item Disponibilité.
+    \item Travaux antérieurs.
+    \item Fiabilité. 
+\end{itemize}
+
+\section{Présentation de la solution proposée}
+
+Pour remédier à la problématique énoncée ci-dessus, nous proposons une solution
+informatique sous forme d'application Web fournissant les fonctionnalités
+suivantes:
+
+\begin{itemize}
+    \item Recherche filtrée de services (selon le tarifs, le domaine, le lieu,
+        \ldos).
+    \item Accès aux informations liées au service (tarifs, durée de réalisation,
+        \ldots).
+    \item Possibilité de contacter le fournisseur du service.
+    \item Possibilité de commander un service.
+    \item Possibilité de suivi de ses commandes.
+    \item Mise en place d'un système de notation des services.
+    \item Ajout de nouveaux services.
+    \item Gestion des services (édition, suppression).
+\end{itemize}
+
+\section{Besoins fonctionnels}
+
+\begin{itemize}
+    \item Le système permettra aux clients et aux fournisseurs de communiquer.
+    \item Le système permettra aux clients de chercher, consulter, et commander
+        un service.
+    \item Le système permettra aux clients d'ajouter des avis.
+    \item Le système permettra aux fournisseurs d'ajouter, modifier, supprimer
+        un service.
+    \item Le système permettra aux fournisseurs de gérer leurs services.
+        (\rmq{comment? C'est pas le point précédent ça?})
+    \item Le système permettra d'afficher quelques statistiques pour les
+        fournisseurs.
+\end{itemize}
+
+\section{Besoins non fonctionnels}
+
+\begin{itemize}
+    \item Vérifier et valider l'identité d'une personne ou
+        l'identification de toute autre entité pour contrôler l'accès à un
+        réseau.
+    \item Choisir des solutions adéquates pour protéger l'utilisateur.
+    \item La capacité du site à aider à la réalisation de l'activité
+        d'utilisateur pour laquelle il a été conçu.
+    \item La capacité du site à être opérationnel à tout instant.
+\end{itemize}
+
+\section{Conclusion}
+
+Dans se chapitre nous avons déterminé la problématique rencontrée par la plus
+part des gens lors de la recherche d'un professionnel, puis nous avons suggéré
+une solution informatique sous forme d'application web.(\rmq{Pas suffisant comme
+conclusion})
+
+%Fin du chapitre 1
+
+%Début du chapitre 2
+\chapter{Analyse et Conception}
+
+\section{Introduction}
+
+L'analyse et la conception est un procédé essentiel du processus de
+développement qui a pour objectif de formaliser les étapes préliminaires du
+développement d'un système afin de satisfaire les besoins du client.
+
+Dans ce chapitre, nous mettrons en évidence le coté conceptuel de notre
+application. Nous utiliserons une démarche généralisée basé sur UP qui utilise
+le langage UML. Les diagrammes UML utilisés sont les suivant: Diagramme de cas
+d'utilisation, diagrammes de séquence, et les diagrammes de classes\rmq{Pas la
+peine de le dire(, qui sont modélisés l'aide de l'outil Draw.io.)}
+
+\section{Le processus unifié}
+
+Le processus unifié est un processus de développement logiciel orientés objets,
+centré sur l'architecture, piloté par des cas d'utilisation, et orienté vers la
+diminution des risques. C'est une méthode générique et itérative \cite{UP}
+\rmq{Vous pouvez en dire plus?}
+
+\begin{figure}[h] 
+    \center 
+    \includegraphics[width=\linewidth]{images/Screenshot(1).png} 
+    \caption{UP est itératif}
+\end{figure}
+
+\section{Langage de modélisation UML}
+
+UML est né de la fusion des 3 principales méthodes d'analyse et de conception
+parues pendant les années 90. Ces méthodes sont OMT (Object Modeling Technique),
+BOOCH, et OOSE.\rmq{(référence)}
+
+James Rumbaugh (créateur de OMT) et GradyBooch (créateur de BOOCH) se sont
+retrouvés au sein de la société \emph{Rational Software} et ont été ensuite
+rejoints par lavr Jacobson (créateur de OOSE) en se donnant comme objectif de
+fusionner leur méthodes et créer UML (UnifiedMethodeLanguage).
+
+UML est donc une norme du langage de modélisation objet qui a été publiée, dans
+sa première version, en novembre 1997 par l'OMG (Object Managment Group),
+instance de normalisation internationale du domaine de l'objet.
+
+\subsection{Définition}
+
+L'acronyme UML signifie \emph{``Langage de modélisation unifié"}. C'est un
+langage visuel constitué d'un ensemble de schémas appelés \emph{diagrammes}, qui
+modélisent les besoins du logiciel. Chaque diagramme donne une vision différente
+du projet et représente le logiciel à développer: son fonctionnement, sa mise en
+route, les actions susceptibles d'être effectuées par le logiciel, etc.
+\cite{UML2}
+
+\begin{figure}[!h] 
+    \center 
+    \includegraphics[width=1\linewidth]{images/uml-logo-large.jpg} 
+    \caption{UML Logo}
+\end{figure}
+
+\subsection{Les diagrammes}
+
+\begin{description}
+    \item[Diagramme de classes :]
+        Les diagrammes de classes expriment de manière générale la structure
+        statique d'un système, en termes de classes et de relations entre ces
+        classes. Outre les classes, ils représentent un ensemble d'interfaces
+        et de paquetages, ainsi que leurs relations.\cite{UML3}
+
+    \item[Diagramme de cas d'utilisation:]
+        Les diagrammes de cas d'utilisation représentent un ensemble \rmq{de cas
+        d'utilisation}, d'acteurs, et leurs relations. Ils représentent la vue
+        statique des cas d'utilisation d'un système et sont particulièrement
+        importants dans l'organisation et la modélisation du comportement d'un
+        système. \cite{UML3}
+
+    \item[Diagramme de séquence :]
+        Un diagramme de séquence met en évidence le classement des messages par
+        ordre chronologique. On forme un diagramme de séquence en plaçant
+        d'abord les objets qui participent à l'interaction en haut du diagramme.
+        Le long de l'axe des abscisses. En général, on place l'objet qui débute
+        l'interaction à gauche, puis on continue en progressant vers la droite,
+        les objets les plus subordonnés étant tout à fait à droite. On place
+        ensuite les messages envoyés et reçus par ces objets le long de l'axe
+        des ordonnées, par ordre chronologique, du haut vers le bas. Cela donne
+        au lecteur une indication visuelle claire du flot de contrôle dans le
+        temps. \cite{UML3}
+\end{description}
+
+\subsection{Identification des acteurs et leurs rôles }
+
+Dans notre système, on distingue les acteurs suivants :
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{ |m{4cm}|m{4cm}|m{4cm}| }
+    \hline
+    \textbf{Acteurs} & \textbf{Codification} & \textbf{Rôle} \\
+    \hline
+    Administrateur & Admin & Gérer le système en effectuant des opérations
+        d'ajout, suppression et modification sur la base de données.\\
+    \hline
+    Client & Client & Inscription, connexion,  consultation de service,
+        Contacter des fournisseur, laisser des avis, commander des services,
+        gérer ses commandes.\\
+    \hline
+    Fournisseur & Fournisseur & Inscription, connexion, gestion de services,
+        gestion de la messagerie.\\
+    \hline
+    \end{tabular}
+    \caption{Identification des acteurs et leurs rôles}
+    \label{Tableaux:1}
+\end{table}
+
+\subsection{Identification des cas d'utilisations}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|m{5cm}|m{5cm}|}
+        \hline
+        \textbf{Cas d'utilisation} & \textbf{Acteurs} \\
+        \hline
+        Inscription & \multirow{5}{5cm}{Client, Fournisseur} \\
+        Connexion & \\
+        Gestion des commandes & \\
+        Gestion des avis & \\
+        Gestion des messages & \\
+        \hline
+        Consultation de services & \multirow{2}{5cm}{Client} \\
+        Recherche de services & \\
+        \hline
+        Ajout de services & \multirow{3}{5cm}{Fournisseur} \\
+        Suppression de services & \\
+        Modification de services & \\
+        \hline
+        Connexion & \multirow{7}{5cm}{Administrateur} \\
+        Gestion des clients & \\
+        Gestion des fournisseurs & \\
+        Gestion des messages & \\
+        Gestion des commandes & \\
+        Gestion des avis & \\
+        Gestion des services & \\
+        \hline
+    \end{tabular}
+    \caption{Identification des cas d'utilisation}
+    \label{tab:my_label}
+\end{table}
+
+\subsection{Diagrammes de cas d'utilisation}
+
+\begin{itemize}
+    \item \underline{Générale:}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=1.1\textwidth]{images/use case.png}
+            \caption{Diagramme de cas d'utilisation générale}
+            \label{fig:general_use_case}
+        \end{figure}
+        
+    \item \underline{Client :} 
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=1.1\textwidth]{images/client use case diag.png}
+            \caption{Diagramme de cas d'utilisation de l'acteur Client}
+            \label{fig:client_use_case}
+        \end{figure}
+    \item \underline{Fournisseur :}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=1.1\textwidth]{images/fournisseur use case diag.png}
+            \caption{Diagramme de cas d'utilisation de l'acteur Fournisseur}
+            \label{fig:fournisseur_use_case}
+        \end{figure}
+    \item \underline{Administrateur :}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=1.1\textwidth]{images/admin use case diag.png}
+            \caption{Diagramme de cas d'utilisation de l'acteur Administrateur}
+            \label{fig:admin_use_case}
+        \end{figure}
+\end{itemize}
+
+
+\subsection{Modélisation des diagrammes de séquence}
+
+Les diagrammes de séquences sont la représentation graphique des interactions
+entre les acteurs et le système selon un ordre chronologique dans la formulation
+UML. Ces communications entre les classes ‘objets' sont reconnues comme des
+messages. Le diagramme des séquences énumère des objets horizontalement, et le
+temps verticalement. Il modélise l'exécution des messages en fonction du temps.
+\cite{UML3}
+
+
+\begin{itemize}
+\item \textbf{Se connecter} 
+\end{itemize}
+
+Le diagramme de séquence suivant illustre les interactions nécessaires pour la
+connexion d'un utilisateur. Après l'inscription utilisateur peut se connecter à
+l'application, pour cela il n'a qu'à cliquer sur le bouton de connexion en
+saisissant son identifiant et son mot de passe, le système vérifie ces champs
+auprès de la base de données, si ses informations sont correctes alors il aura
+accès à l'application pour gérer les services (comme par exemple ajouter un
+service) sinon un message d'erreur sera affiché et le système lui redemande à
+nouveau de saisir ses coordonnées.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{images/sequence diag authentification.jpg}
+    \caption{Diagramme de séquence du cas d'utilisation "Connexion"}
+    \label{fig:my_label}
+\end{figure}
+
+\begin{itemize}
+\item  \textbf{Publication de services}
+\end{itemize}
+
+Le diagramme de séquence suivant illustre les interactions nécessaires pour la
+publication d'un  service. Après l'authentification, le fournisseur peut déposer
+un service tout en remplissant un formulaire de dépôt d'un service. Si le
+fournisseur oublie de remplir l'un des champs ou remplit un champ dans une case
+inapproprié le service ne sera pas déposé.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{images/sequence diag publier service.jpg}
+    \caption{Diagramme de séquence du cas d'utilisation "Publication de service"}
+    \label{fig:my_label}
+\end{figure}
+
+\begin{itemize}
+    \item \textbf{Recherche de services}
+\end{itemize}
+
+Le diagramme de séquence suivant illustre les interactions nécessaires pour la
+recherche d'un service. En effet, l'utilisateur saisit la recherche, le système
+vérifiera si le service cherché existe dans la base de données ou pas, et il
+lui affiche un résultat.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{images/sequence diag recherche service.jpg}
+    \caption{Diagramme de séquence du cas d'utilisation "Recherche de service"}
+    \label{fig:my_label}
+\end{figure}
+
+\begin{itemize}
+    \item \textbf{Suppression de service}
+\end{itemize}
+
+Le diagramme de séquence suivant illustre les interactions nécessaires pour la
+suppression d'un service. En effet le fournisseur choisit un service, le système
+demande à le fournisseur  une confirmation de suppression, si confirmée, le
+système vérifie l'existence de service dans la base de données, si le service
+existe la suppression va être appliquée sinon un message d'erreur sera
+affiché.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{images/sequence diag supp service.jpg}
+    \caption{Diagramme de séquence du cas d'utilisation "Suppression de service"}
+    \label{fig:my_label}
+\end{figure}
+
+\begin{itemize}
+    \item \textbf{Modification de compte}
+\end{itemize}
+
+Le diagramme de séquence suivant illustre les interactions nécessaires pour
+qu'un fournisseur modifie les informations de son compte. En effet, le
+fournisseur demande au système la modification de son compte, ensuite le
+système affiche le formulaire de modification et le fournisseur modifie ses
+informations, le système vérifie à nouveau les informations, si elles sont
+correctes, la base de données sera mise à jour sinon un message d'erreur sera
+affiché.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{images/sequence diag modifier compte.jpg}
+    \caption{Diagramme de séquence du cas d'utilisation "Modification de compte"}
+    \label{fig:my_label}
+\end{figure}
+
+\begin{itemize}
+    \item \textbf{Suppression d'un utilisateur}
+\end{itemize}
+
+Le diagramme de séquence suivant illustre les interactions nécessaires pour la
+suppression d'un utilisateur. En effet, l'administrateur choisit l'utilisateur à
+supprimer, le système vérifie son existence dans la base de données, si
+l'utilisateur existe la suppression sera appliquée sinon un message d'erreur
+sera affiché.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{images/sequence diag supp user.jpg}
+    \caption{Diagramme de séquence du cas d'utilisation "Suppression d'un utilisateur"}
+    \label{fig:my_label}
+\end{figure}
+
+\subsection{Diagramme de classe}
+
+Le digramme de classe permet de donner la représentation statique du système à
+développer. Cette représentation est centrée sur les concepts de classes et
+d'associations. Chaque classe est décrite par les données et les traitements dont
+elle est responsable. Nous avons pu construire le diagramme de classe indiqué
+ci-dessous ensuite le passage au modèle logique est effectué pour former la base
+de données de l'application.\rmq{Après avoir construit le diagramme de classe
+sur la Figure~\ref{fig:diag_classes}, nous avons établi un modèle relationnel
+que nous avons utilisé pour créer les différentes tables de notre base de
+données.}
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{images/Diag de classe.jpg}
+    \caption{Diagramme de classe"}
+    \label{fig:diag_classes}
+\end{figure}
+
+\subsection{Le schéma relationnel}
+
+Pour réaliser ce passage, nous avons suivi des règles strictes et précises
+permettant de traduire le contenu conceptuel du diagramme de classe en modèle
+relationnel. Ces règles sont:
+
+\subsubsection{Règle de passage du diagramme de classe au modèle relationnel}
+
+Nous avons pu passer du diagramme de classes au modèle relationnel en nous
+basant sur les règles suivantes:
+
+\begin{description}
+    \item[Règle 1 - Transformation des classes :] Chaque classe devient une table.
+        L'identifiant de la classe devient la clé primaire et chaque attribut de
+        classe se transforme en un champ de table.
+    
+    \item[Règle 2 - Association plusieurs-à-plusieurs:] Toute association sous
+        forme ( ?..*) à ( ?..*), donne naissance à trois tables, dont la table
+        dérivée de l'entité association possédera les clés primaires des deux
+        autres tables comme clé primaire, plus ses propres attributs s'il s'agit
+        d'une classe d'association.
+
+    \item[Règle 3 - Association d'un-à-plusieurs:] Toute association binaire (
+        ?..1) à ( ?..*) donne naissance à une table dérivée de l'entité de la
+        cardinalité (1..1), et sa clé primaire est déposé comme clé étrangère
+        dans la table dérivée de l'entité de la cardinalité ( ?..*).
+\end{description}
+
+\subsubsection{Le modèle logique de données}
+
+\rmq{POUR\_QUOI UNE IMAGE POUR DU TEXTE?!}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{images/MLD.png}
+\caption{Modèle logique de données}
+\label{fig:my_label}
+\end{figure}
+
+\subsection{Conclusion}
+Dans ce chapitre, nous avons présenté le processus de développement UP, le
+langage de modélisation UML, et avons procédé à la modélisation des différents
+diagrammes: diagrammes de cas d'utilisations, diagrammes de séquences, et
+diagrammes de classes. Cette étape de modélisation nous a permis d'avoir une vue
+générale sur le comportement théorique des fonctionnalités offertes par notre
+application.  Cette base théorique nous servira de guide pour le développement
+de l'application, qui fera l'objet du chapitre suivant.
+
+%Fin du chapitre 2
+
+%Début du chapitre 3
+
+\chapter{Réalisation et implémentions}
+
+\section{Introduction}
+
+Depuis le début de ce projet, nous avons bien déterminé les perspectives de
+l'application en commençant par une étude préalable, qui nous a permis d'avoir
+un objectif bien concret. Puis en arrivant à l'analyse, nous avons pu avoir une
+idée bien claire sur comment va être notre application web, et c'est ce qui nous
+a mené à mieux comprendre ses fonctionnalités. Dans ce chapitre, nous allons
+nous appuyer sur la conception réalisée dans le chapitre précédent afin de
+présenter la concrétisation de l'application à travers son implémentions. Nous
+allons commencer par présenter les différents langages de développement ainsi
+que les outils de travail utilisés dans notre démarche, nous allons ensuite
+présenter en détail le principe de fonctionnement de ses outils, nous allons
+finir en présentant les interfaces des pages web de notre application ainsi que
+les différentes actions possibles à effectuer dans ces pages.
+    
+\section{Outils et environnement de développement}
+
+\subsection{XAMPP}
+
+XAMPP est l'environnement de développement PHP le plus populaire (\rmq{sous
+windows}). XAMPP est une distribution Apache entièrement gratuite et facile à
+installer contenant MySQL, PHP et Perl. Le paquetage open source XAMPP a été mis
+au point pour être incroyablement facile à installer et à utiliser.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{images/1024px-Xampp_logo.svg.png}
+    \caption{Logo de XAMPP}
+    \label{fig:my_label}
+\end{figure}
+        
+\subsection{MYSQL}
+        
+MySQL est un système de gestion de base de données relationnel, un langage de
+requêtes vers les bases de données exploitant le modèle relationnel et utilise
+le langage SQL comme langage de requête. SQL est un langage de manipulation de
+bases de données mis au point dans la années 70 par IBM, il permet d'exécuter
+trois types de manipulations :
+
+\begin{enumerate}
+    \item La manipulation des tables : Création, suppression, modification de la
+        structure.
+    \item Les manipulations des données de la base : Sélection, modification,
+        suppression d'enregistrement.
+    \item La gestion des droits d'accès aux tables : Contrôle des données, droit
+        d'accès, validation des modifications. \cite{memoire}
+\end{enumerate}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{images/1200px-MySQL.svg.png}
+    \caption{Logo de MySQL}
+    \label{fig:my_label}
+\end{figure}
+
+\subsection{IDE Visual Studio Code}
+
+Visual Studio Code est un éditeur de code extensible développé par Microsoft
+pour Windows, Linux et macOS. Les fonctionnalités incluent la prise en charge du
+débogage, la mise en évidence de la syntaxe, la complétion intelligente du code,
+les snippets, la refactorisation du code et Git intégré. \cite{ide}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.3\textwidth]{images/1024px-Visual_Studio_Code_1.35_icon.svg.png}
+    \caption{Logo de VS Code}
+    \label{fig:my_label}
+\end{figure}
+
+\subsection{Draw.io}
+
+C'est une application gratuite en ligne, accessible via le navigateur qui permet
+de dessiner des diagrammes ou des organigrammes. Cet outil nous propose de
+concevoir toutes sortes de diagrammes, de dessins vectoriels, de les enregistrer
+ou de les exporter en format image, XML,PDF, etc.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{images/drawio.jpg}
+    \caption{Logo de Draw.io}
+    \label{fig:my_label}
+\end{figure}
+
+\subsection{Git}
+
+Git est un logiciel de gestion de versions décentralisé. C'est un logiciel libre
+créé par Linus Torvalds, auteur du noyau Linux, et distribué selon les termes de
+la licence publique générale GNU version 2. Le principal contributeur actuel de
+git et depuis plus de 16 ans est Junio C Hamano. En 2016, il s'agit du logiciel
+de gestion de versions le plus populaire qui est utilisé par plus de douze
+millions de personnes.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{images/1280px-Git-logo.svg.png}
+    \caption{Logo de Git}
+    \label{fig:my_label}
+\end{figure}
+
+\subsection{Langages de programmation}
+
+\subsubsection{HTML}
+
+HTML signifie « HyperText Markup Language » qu'on peut traduire par « langage de
+balises pour l'hypertexte ». Il est utilisé afin de créer et de représenter le
+contenu d'une page web et sa structure. D'autres technologies sont utilisées
+avec HTML pour décrire la présentation d'une page (CSS) et/ou ses
+fonctionnalités interactives (JavaScript).\cite{html}
+
+HTML fonctionne grâce à des « balises » qui sont insérées au sein d'un texte
+normal. Chacune de ces balises indique la signification de telle ou telle
+portion de texte dans le site, par exemple <head>, <title>, <body>, <header>,
+<footer>, <article>, <section>, <p>, <div>, <span>, <img> et bien d'autres
+encore. Ces éléments forment les blocs utilisés pour construire un site
+web.\cite{html}
+
+On parle d'« hypertexte » en référence aux liens qui connectent les pages web
+entre elles. \cite{html}
+
+\subsubsection{CSS }
+
+Cascading Style Sheets (CSS) est un langage de feuille de style utilisé pour
+décrire la présentation d'un document écrit en HTML ou en XML. CSS décrit la
+façon dont les éléments doivent être affichés à l'écran, sur du papier, en
+vocalisation, ou sur d'autres supports.\cite{css}
+
+CSS est l'un des langages principaux du Web ouvert et a été standardisé par le
+W3C. Ce standard évolue sous forme de niveaux (levels), CSS1 est désormais
+considéré comme obsolète, CSS2.1 correspond à la recommandation et CSS3, qui est
+découpé en modules plus petits, est en voie de standardisation.\cite{css}
+
+\subsubsection{JavaScript}
+
+JavaScript (qui est souvent abrégé en « JS ») est un langage de script léger,
+orienté objet, principalement connu comme le langage de script des pages web.
+Mais il est aussi utilisé dans de nombreux environnements extérieurs aux
+navigateurs web tels que Node.js, Apache CouchDB voire Adobe Acrobat. \cite{js}
+
+Il est développé par Netscape et utilisé dans des millions de pages web et
+d'applications serveur dans le monde entier.\cite{js}
+
+Contrairement à une conception populaire, JavaScript n'est pas « du Java
+interprété ». En quelques mots, JavaScript est un langage de script dynamique
+utilisant une construction d'objets basée sur des prototypes.\cite{js}
+
+\subsubsection{PHP }
+
+PHP (Hypertext Preprocessor) est un langage de script Web intégré au HTML. Cela
+signifie que le code PHP peut être inséré dans le code HTML d'une page Web.
+\cite{php}
+
+Lors de l' accès à une page PHP , le code PHP est lu ou "analysé" par le serveur
+sur lequel la page réside. Les résultats des fonctions PHP de la page sont
+généralement renvoyés sous forme de code HTML, qui peut être lu par le
+navigateur.\cite{php}
+
+Étant donné que le code PHP est transformé en HTML avant le chargement de la
+page, les utilisateurs ne peuvent pas afficher le code PHP sur une page. Cela
+rend les pages PHP suffisamment sécurisées pour accéder aux bases de données et
+autres informations sécurisées.\cite{php}
+
+\subsubsection{Framworks et Bibliothèques utilisé}
+
+Un Framework est, comme son nom l'indique en anglais, un «  cadre de travail » .
+L'objectif d'un Framework est généralement de simplifier le travail des
+développeurs informatiques, en leur offrant une architecture "prête à l'emploi"
+et qui leur permettre de ne pas repartir de zéro à chaque nouveau projet.
+
+Les Frameworks sont comparables aux patrons de couture. Les principaux avantages
+sont donc :
+
+\begin{itemize}
+    \item La réutilisation des codes.
+    \item La standardisation de la programmation.
+    \item La formalisation d'une architecture adaptée aux besoins de chaque
+        entreprise.
+\end{itemize}
+
+À noter aussi que les Frameworks sont toujours « enrichis » de l'expérience de
+tous les développements antérieurs.
+
+Nous avons utilisé deux Frameworks :
+
+\subsubsection{Codeigniter 4}
+
+CodeIgniter est un framework de développement d'applications - une boîte à
+outils - pour les personnes qui créent des sites Web en utilisant PHP. Son
+objectif est de vous permettre de développer des projets beaucoup plus
+rapidement que si vous écriviez du code à partir de zéro, en fournissant un
+riche ensemble de bibliothèques pour les tâches courantes, ainsi qu'une
+interface simple et une structure logique pour accéder à ces bibliothèques.
+CodeIgniter vous permet de vous concentrer de manière créative sur votre projet
+en minimisant la quantité de code nécessaire pour une tâche donnée.
+
+Dans la mesure du possible, CodeIgniter est resté aussi flexible que possible,
+vous permettant de travailler comme vous le souhaitez, sans être obligé de
+travailler d'une certaine manière. Le cadre peut avoir des pièces de base
+facilement étendues ou complètement remplacées pour que le système fonctionne
+comme vous en avez besoin. En bref, CodeIgniter est le framework malléable qui
+essaie de fournir les outils dont vous avez besoin tout en restant à l'écart.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{images/ci-new-logo-04-02.jpg}
+    \caption{Logo de CodeIgniter}
+    \label{fig:my_label}
+\end{figure}
+
+CodeIgniter  requière l'installation d'un gestionnaire de dépendances « composer
+».
+
+Pour installer CodeIgniter  nous devons écrire dans le composer la commande
+suivante :
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{images/codeigniter.png}
+    \label{fig:my_label}
+\end{figure}
+
+\begin{itemize}
+    \item \textbf{Organisation de Codeigniter}
+    CodeIgniter  est composé d'une hiérarchie de dossiers et fichiers
+        représentée dans cette figure :
+    
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{images/ci structure.png}
+        \caption{Structure de Codeigniter}
+        \label{fig:my_label}
+    \end{figure}
+
+    \item \textbf{Les Controllers}
+    
+        La grande majorité des actions qu'un utilisateur enclenche mènera à
+        l'appel d'une méthode d'un contrôleur. Les  Controllers   vont permettre
+        de gérer les différentes actions demandées par les utilisateurs lors
+        d'une action
+    
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{images/controlers.png}
+        \caption{Les controllers}
+        \label{fig:my_label}
+    \end{figure}
+    
+    \item \textbf{Les Models}
+    \begin{itemize}
+        \item  Le Model est la partie qui permet de stocker et de traiter les
+            donnes.  D'une manière générale en PHP et avec CodeIgniter, le model
+            n'effectue que les opérations en base de données.
+        \item Pour créer un Modele avec CodeIgniter, il faut créer un fichier
+            PHP dans le dossier system/application/models contenant une classe
+            qui hérite de la classe Model du framework de CodeIgniter. Dans
+            cette classe, on crée les fonctions qui effectuent les traitements
+            sur les donnes et qui appellent les fonctions se chargeant de
+            stocker les donnes (insertion SQL, écriture dans un fichier texte ou
+            XML) ainsi qu'un constructeur appelant le constructeur de la classe
+            Model.
+    \end{itemize}
+
+      \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{images/models.png}
+        \caption{Les Models}
+        \label{fig:my_label}
+    \end{figure}
+    
+    \item \textbf{Les Vues}
+    
+    Pour afficher correctement une page Web dans le navigateur, il faut utiliser
+        une vue. C'est la vue qui est en charge de générer le code HTML.  Pour
+        créer une vue avec CodeIgniter, il suffit de créer un script PHP ou
+        HTML, qui affiche les donnes souhaites, dans le dossier
+        system/application/views. Il n'y a pas de conventions particulières.
+ 
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{images/viewq.png}
+        \caption{Les Vues}
+        \label{fig:my_label}
+    \end{figure}
+\end{itemize}
+    
+
+\subsubsection{TailwindCss}
+
+Tailwind CSS se décrit lui-même comme un premier framework CSS utilitaire.
+Plutôt que de se concentrer sur la fonctionnalité de l'élément stylisé, Tailwind
+est centré sur la façon dont il doit être affiché. Cela permet au développeur de
+tester plus facilement de nouveaux styles et de modifier la mise en page. Nous
+interrogeons Jen Looper sur Tailwind et sur la façon dont cette approche peut
+nous aider !
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{images/tailwind-css-logo-vector.png}
+    \caption{Logo de Tailwindcss}
+    \label{fig:my_label}
+\end{figure}
+
+\subsubsection{La bibliothéque Grocery CRUD}
+
+Grocery CRUD est une bibliothéque Open Source qui permet à l'aide du framework
+Codeigniter de crée un panel administrateur facilement avec quelques lignes de
+code.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{images/logo-big.png}
+    \caption{Logo de GroceryCRUD}
+    \label{fig:my_label}
+\end{figure}
+
+\begin{itemize}
+    \item \textbf{Example :}
+    Un exemple très simple pour commencer est les 4 lignes de code ci-dessous.
+    Voici les fonctions les plus courantes :
+    \begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{images/example.png}
+    \caption{Exemple d'utilisation de GroceryCrud}
+    \label{fig:my_label}
+\end{figure}
+\end{itemize}
+
+\section{Captures d'écran et fonctionnement}
+
+\subsection{La page d'accueil}
+    
+La première interface que l'utilisateur rencontre lors de l'accès vers notre
+application est celle de l'accueil. L'utilisateur aura deux choix, soit de se
+connecter en cliquant sur le bouton "Connexion" s'il à déjà un compte, soit de
+s'inscrire en cliquant sur le bouton "Inscription" si l'utilisateur n'a pas de
+compte.
+
+Si l'utilisateur choisi de se connecter, il sera rediriger vers l'interface
+d'authentification, ou l'utilisateur sera amener a saisir ses information, dans
+le cas ou ses informations sont correct, la page principale sera afficher, dans
+le cas contraire, un message d'erreur sera afficher.
+
+L'utilisateur en fonction de sont type (Admin, Fournisseur, Client) sera
+automatiquement rediriger vers la page principale qui lui convient
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{images/accueil.png}
+    \caption{Page d'accueil}
+\end{figure}
+
+\subsection{La page d'inscription}
+
+Si l'utilisateur choisi de se s'inscrire, il sera rediriger vers l'interface
+d'inscription, ou l'utilisateur sera amener remplir un formulaire d'inscription
+en mentionnant son type au préalable, le système vas vérifier la validité des
+informations saisie et les insèrent dans la base de donnée.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{images/inscription.png}
+    \caption{Page de pré-inscription}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{images/formulaire.png}
+    \caption{Formulaire d'inscription}
+\end{figure}
+
+\subsection{Interfaces coté client}
+
+L'interface principale du client se présente comme suit :
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{images/client dash.png}
+    \caption{Interface principale du client}
+\end{figure}
+
+Depuis cette interface, le client pourras :
+\begin{itemize}
+    \item Chercher des services selon un filtre
+    \item Voir les messages échanger
+    \item Voir les commandes effectuer et leurs état
+    \item voir les avis précédemment laisser.
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{images/messages.png}
+    \caption{Interface des messages échanger}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{images/services.png} 
+    \caption{Interface des services}
+\end{figure}
+
+Le client pourras consulter le contenu du service (Descriptions, images, tarifs)
+et pourras commander le service, contacter le fournisseur et laisser un avis.
+
+ \begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{images/service consult.png} 
+    \caption{Interface des services}
+\end{figure}
+
+\subsection{Interface coté fournisseur}
+
+L'interface principale du fournisseur se présente comme suit :
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{images/fourni main.png} 
+    \caption{Interface coté Fournisseur}
+\end{figure}
+
+Le fournisseur pourras a travers cette interface : 
+\begin{itemize}
+    \item Voir l'ensemble de ses services et ajouter au besoin
+    \item Gérer les commandes reçu
+    \item Échanger des messages
+    \item Voir quelques statistiques
+    
+\end{itemize}
+
+\subsection{Conclusion}
+
+Après le chapitre de l'analyse et de la conception, vient la réalisation de
+l'application. Dans cette partie technique, nous avons émit les outils et les
+environnements utilisé lors de la réalisation, ainsi que les différents langages
+de programmation. Puis nous avons citer quelques fonctionnalités de notre
+application en s'appuyant sur des capture d'écrans et quelque explication pour
+clarifier le fonctionnement des ses fonctionnalités
+
+%Fin du chapitre 3
+
+\section{Conclusion Générale}
+
+Nous sommes parvenus, grâce à ce projet à réaliser une application web sur le
+thème ‘ Conception et réalisation d'une application web d'offres de services
+professionnel ‘  destinée a tout le monde qui souhait chercher quelqu'un de
+qualifier, de professionnel.
+
+Afin d'y parvenir, nous avons débuté notre projet par évoqué la problématique
+rencontrer par la plus part des gens lors de leurs recherche de personnes
+qualifié offrant leurs services, donner les solutions proposées par notre
+application, en précisant ses différentes fonctionnalité, dans le but de mieux
+comprendre notre travail. 
+
+Dans le deuxième chapitre, nous évoquons des définitions de l'UML et UP ensuite
+nous avons déterminer les différents diagrammes d'UML afin de représenter la
+structure globale et l'architecture détaillé de notre système en détaillant son
+fonctionnement.
+
+En finissant par un troisième chapitre, où nous avons présenté les différents
+outils et langages de développement utilisés pour la réalisation de
+l'application, ainsi qu'une présentation de quelques interfaces de celle ci.
+    
+Dans notre application, nous avons essayé de régler les différents problèmes
+que rencontrent les gens au quotidien; (\rmq{non, ce n'est pas vrai.})
+
+\begin{itemize}
+    \item Manque d'informations préalables sur une personne.
+    \item Manque de moyens pour jauger les compétences d'une personne.
+    \item Manque de moyens de contacter directement une personne.
+\end{itemize}
+
+\printbibliography
+
+\end{document}
