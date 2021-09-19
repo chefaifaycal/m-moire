@@ -76,120 +76,264 @@
 
 %Début introduction
 \chapter*{Introduction Générale}
+Depuis sa naissance, l’humain n’a cessé d’évoluer et de chercher le moyen de rendre sa vie plus confortable.
+L’internet fut une étape crucial de se développement.
 
-De nos jours, Internet a pris un grand élan dans notre vie. Avant il n'était
-destinée qu'aux experts et aux grandes entreprises. Aujourd'hui, il est
-devenue indispensable et offre des services dans tous les domaines. Internet
-permet aux entreprises ou même aux boutiques d'offrir leurs services afin de
-mieux répondre aux besoins de ses clients. Dans notre projet, nous nous
-intéressons à la gestion de ces services.  En effet, dans notre vie quotidienne,
-lors de la recherche d'une personne professionnelle (ou compétente) dans un
-domaine   nous rencontrons beaucoup de difficultés, par exemple : les
-informations, les contacts. Ce qui  peut engendrer une perte de temps et
-d'argent. Pour pallier ces problèmes, nous avons créé  et développé une
-application web dynamique de gestion d'offres des services. A travers cette
-application, on regroupe plein de gens compétents qui peuvent partager leurs
-travaux et leurs contacts. Ainsi, toute personne pourra consulter ou bien
-acheter des services. 
+C’est en 1973 que le concept d’Internet a vu le jour, et jusqu’à aujourd’hui, elle n’a cessé d’évoluer
+et de proposer de nouvelles technologies pour améliorer le quotidien des gens,
 
-Notre choix de développer une application web, se justifie par le fait qu'elle
-est un moyen très utile et efficace pour exposer et offrir des services aux
-internautes via internet grâce à l'accessibilité qu'elle offre aux utilisateurs
-ou bien les clients indépendamment de leurs emplacements physiques, ce qui nous
-permettra de rapprocher les fournisseur et les clients.  Dans le présent rapport,
-nous allons présenter les différentes étapes que nous avons suivies lors du
-développement de notre application web. Notamment, la démarche suivie, les
-diagrammes conçus, ainsi que les différents langages et outils utilisés. Enfin, 
-nous clôturons ce travail avec une conclusion générale et quelques
-perspectives qui permettront d'améliorer notre solution.
+Le chercheur britannique Tim Berners-Lee a inventé le World Wide Web en 1989. À l’origine, le projet a 
+été conçu et développé pour que des scientifiques travaillant dans des universités et instituts du monde
+entier puissent s'échanger des informations instantanément. L'idée de base du WWW était de combiner les 
+technologies des ordinateurs personnels, des réseaux informatiques et de l'hypertexte pour créer un système
+d'information mondial, puissant et facile à utiliser.
+		
 
-\rmq{Développez davantage cette introduction générale. Illustrez, donnez des
-exemples, \ldots Vous avez l'obligation d'intéresser le lecteur et de le
-convaincre de l'utilité de votre travail.}
+Aujourd’hui le WEB occupe une grande place dans notre vie, que se soit notre vie personnelle ou professionnelle.
+La majorité des activité quotidiennes nécessite un accès directe et rapide au réseaux, par exemple un chef de projet
+qui doit gérer son équipe et son projet à distance, ou bien une personne qui voudrait faire ses courses, 
+sans se déplacer à l’aide de sites marchands.
+
+Parmi les types d’applications disponibles, on trouve les applications web. Celles ci sont des sites web se comportent
+comme de véritables applications pour ordinateur ou téléphone. La plus part des entreprises se concentrent 
+sur le développement de se genre d’application car elles sont avantageuse niveau accessibilité.
+En effet elle offre une grande mobilité et un accès facile à partir de n’importe quel appareil mobile,
+n’importe où et à tout moment avec une simple connexion Internet.
+
+Notre choix de développer une application web se justifie par le fait qu'elle est un moyen très utile
+et efficace pour exposer et offrir des services via Internet grâce à l'accessibilité qu'elle offre
+aux utilisateurs ou bien aux clients indépendamment de leurs emplacements physiques, ce qui nous 
+permettra de rapprocher les fournisseurs des clients.
+
+Notre projet vise à simplifier le processus que rencontre la plus part des gens lors de la recherche
+d’une personne qualifiée dans un domaine, c’est à dire la recherche de gens fiables, de préférence
+qui habitent dans une région alentour, qui a une certaine expérience et qu’on pourra contacter sans problème.
+
+Dans ce présent rapport, nous présenterons les différentes étapes que nous avons suivies lors du
+développement de notre application web. Notamment, la démarche suivie, les diagrammes conçus,
+ainsi que les différents langages et outils utilisés. Enfin, nous clôturerons ce travail avec 
+une conclusion générale et quelques perspectives qui permettront d'améliorer notre solution.
 
 %Fin introduction
 
 
 %Début du chapitre 1
 \chapter{Étude Préalable}
+
 \section{Introduction}
-De nos jours les désirs ne sont plus comme avant (\rmq{reformulez}), aujourd'hui
-nous nous focalisons sur la réalisation des besoins efficacement en un temps
-minimal. C'est pour cela que nous optons pour les applications qui offrent des
-services en ligne sans avoir à se déplacer ni à perdre beaucoup de temps et
-d'argent.  Dans le cadre de notre travail, nous nous focalisons sur la gestion
-d'offre de services en ligne, notamment sur la publication des services.
-L'objectif principal est de faciliter la tâche à l'internaute concernant ses
-informations, ses contacts, ses achats,  etc.
+Dans ce chapitre, nous évoquerons la problématique au centre de notre application.
+Nous ferons référence à quelques détails de cette problématique et nous proposerons
+une solution informatique sous forme d’application web. Pour clore ce chapitre,
+nous parlerons du langage de modélisation utilisé au cours de notre conception. 
 
 \section{Identification de la problématique}
+Le problème que rencontre beaucoup de gens dans leur vie quotidienne est la recherche
+de professionnels compétents ainsi que des informations sur leurs professions, parmi elles on retrouve : 
 
-Le problème que rencontre beaucoup de gens dans leurs vie quotidienne, est la
-recherche de professionnels compétents. En outre, ils ont essentiellement besoin
-d'informations telles que:
+	\begin{itemize}
+	    \item Contacts du professionnel;
+	    \item Informations sur les tarifs;
+	    \item Disponibilité; 
+	    \item Travaux antérieurs;
+	    \item Fiabilité. 
+	\end{itemize}
 
-\begin{itemize}
-    \item Contacts de professionnels.
-    \item Tarifs usités.
-    \item Disponibilité.
-    \item Travaux antérieurs.
-    \item Fiabilité. 
-\end{itemize}
+La méthode classique est la recherche manuelle, on peut appeler ça "Du bouche à oreille".
+Les informations sur les personnes recherchées peuvent ne pas être correctes, ou du moins pas fiables. 
+
+Prenons un exemple, soit disant que vous avez une panne d'électricité à la maison, vous faites quoi?
+Appeler un électricien est le premier réflexe pour les non bricoleurs. Le fait de chercher
+un numéro de téléphone, de s'assurer que la personne est compétente, de voir les tarifs de la personne
+à l'avance peut prendre du temps, et souvent on est déçus du résultat.
+
+Le but est de minimiser le temps passé sur les recherches et d'augmenter le taux de satisfaction chez 
+les clients. Pour cela nous avons décidé de réaliser cette application.
 
 \section{Présentation de la solution proposée}
-
-Pour remédier à la problématique énoncée ci-dessus, nous proposons une solution
-informatique sous forme d'application Web fournissant les fonctionnalités
-suivantes:
+Pour remédier à la problématique identifiée ci-dessus, nous proposons une solution informatique sous
+forme d'application web fournissant les fonctionnalités suivantes :
 
 \begin{itemize}
-    \item Recherche filtrée de services (selon le tarifs, le domaine, le lieu,
-        \ldos).
-    \item Accès aux informations liées au service (tarifs, durée de réalisation,
-        \ldots).
-    \item Possibilité de contacter le fournisseur du service.
-    \item Possibilité de commander un service.
-    \item Possibilité de suivi de ses commandes.
-    \item Mise en place d'un système de notation des services.
-    \item Ajout de nouveaux services.
-    \item Gestion des services (édition, suppression).
+	\item Recherche filtrée des services (selon le tarif, le domaine, le lieu, etc.);
+	\item Accès aux informations liées au service (tarifs, durée de réalisation, etc.);
+	\item Possibilité de contacter le fournisseur du service;
+	\item Possibilité de commander un service; 
+	\item Possibilité de suivi de ses commandes;
+	\item Mise en place d'un système de notation des services;
+	\item Ajout de nouveaux services;
+	\item Édition et suppression des services.
 \end{itemize}
 
 \section{Besoins fonctionnels}
-
 \begin{itemize}
-    \item Le système permettra aux clients et aux fournisseurs de communiquer.
-    \item Le système permettra aux clients de chercher, consulter, et commander
-        un service.
-    \item Le système permettra aux clients d'ajouter des avis.
-    \item Le système permettra aux fournisseurs d'ajouter, modifier, supprimer
-        un service.
-    \item Le système permettra aux fournisseurs de gérer leurs services.
-        (\rmq{comment? C'est pas le point précédent ça?})
-    \item Le système permettra d'afficher quelques statistiques pour les
-        fournisseurs.
+	\item Le système permettra aux clients et fournisseurs de communiquer.
+	\item Le système permettra aux clients de chercher, consulter et commander un service.
+	\item Le système permettra aux clients d'ajouter un avis;.
+	\item Le système permettra aux fournisseurs d'ajouter, modifier ou supprimer un service.
+	\item Le système permettra d'afficher quelques statistiques pour les fournisseurs.
 \end{itemize}
 
 \section{Besoins non fonctionnels}
-
 \begin{itemize}
-    \item Vérifier et valider l'identité d'une personne ou
-        l'identification de toute autre entité pour contrôler l'accès à un
-        réseau.
-    \item Choisir des solutions adéquates pour protéger l'utilisateur.
-    \item La capacité du site à aider à la réalisation de l'activité
-        d'utilisateur pour laquelle il a été conçu.
-    \item La capacité du site à être opérationnel à tout instant.
+	\item Vérifier ou valider l'identité d'une personne ou identifier toute autre entité pour contrôler 
+	l'accès à un réseau;
+	\item Choisir des solutions adéquates pour protéger l'utilisateur;
+	\item Capacité du site à aider à la réalisation de l'activité d'utilisateur pour laquelle il a été conçu;
+	\item Capacité du site à être opérationnel à tout instant.
 \end{itemize}
 
-\section{Conclusion}
+\section{Langage de modélisation}
+    \subsection{Unified Model Language}
+    Dans la carrière d'un développeur, il sera confronté à concevoir et réaliser des applications
+    très complexes en tout genre. L'UML aide à gérer cette complexité pour que au cours de la réalisation,
+    le développeur ne dévie pas de l'objectif final, c'est à dire satisfaire le client. \cite{learningUML}
+    
+    Les systèmes développés ont pour but de satisfaire des objectifs précis formulés par le client.
+    Ce client donc fait partie du processus de développement. Ils imaginent, décrivent à quoi peut
+    ressembler le système final. Le rôle du développeur est de bien capturer les besoins du client à
+    travers la modélisation.\cite{unhelkar2017software}
+    
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=1\textwidth]{images/modelisation.png}
+        \caption{Importance de la modélisation en génie logiciel}
+        \label{Importance de la modélisation}
+    \end{figure}
 
-Dans se chapitre nous avons déterminé la problématique rencontrée par la plus
-part des gens lors de la recherche d'un professionnel, puis nous avons suggéré
-une solution informatique sous forme d'application web.(\rmq{Pas suffisant comme
-conclusion})
+        \subsubsection{Définition}
+        UML est un acronyme en Anglais \emph{"Unified Modeling Langage"}, en français ça donne 
+	\emph{"Langage de modélisation unifié"}. C'est donc un langage de modélisation ou bien
+	un langage visuel, car il utilise un ensemble de diagrammes pour décrire la structure 
+	et le comportement du système.\cite{geeksforgeeks}
+        
+        L'UML a était standardisé en 1997 par l'OMG (Object Management Group). L'organisation
+	internationale de normalisation (ISO) a publié UML en tant que norme approuvée en 2005.
+	UML a été révisé au fil des ans et est revu périodiquement.\cite{geeksforgeeks}
+        
+        \begin{figure}[!h] 
+        \center 
+            \includegraphics[width=0.3\textwidth,keepaspectratio]{images/uml-logo-large.jpg} 
+            \caption{Logo de UML.}
+            \label{UML logo}
+        \end{figure}
+        
+        \subsubsection{Pourquoi utiliser UML?}
+        \begin{description}
+            \item[UML est un langage de modélisation standard] c'est a dire 
+            qu'il est indépendant du langage de programmation. \cite{IBM}
+            \item[UML est un langage et non une méthodologie], 
+	    il peut facilement s'intégrer dans la manière de travail des entreprises sans nécessiter de changement.\cite{IBM}
+            \item[UML fournis des diagrammes] 
+	    qui facilitent la compréhension d'une application en développement.
+	    Cela permettra aux personnes maîtrisant UML de rejoindre plus facilement
+	    votre projet et de devenir rapidement productifs.\cite{IBM}
+        \end{description}
+        
+        \subsubsection{Les diagrammes}
+        UML propose 14 diagrammes en tout. Les diagrammes standards les plus utiles sont :
+	diagramme de cas d'utilisation, diagramme de classes, diagramme de séquence.
+            \begin{description}
+                \item[Diagramme de cas d'utilisation :]
+                Un cas d'utilisation illustre une unité de fonctionnalité fournie par le système.
+		L'objectif principal du diagramme de cas d'utilisation est d'aider les équipes de développement
+		à visualiser les exigences fonctionnelles d'un système, y compris la relation des « acteurs »
+		(êtres humains qui interagiront avec le système) avec les processus essentiels,
+		ainsi que les relations entre les différents cas d'utilisation.\cite{IBM}
+                
+                Pour afficher un cas d'utilisation sur un diagramme de cas d'utilisation, 
+		vous dessinez un ovale au milieu du diagramme et placez le nom du cas d'utilisation au centre.\cite{IBM}
+                
+                Pour dessiner un acteur (indiquant un utilisateur du système) sur un diagramme de cas d'utilisation,
+		vous dessinez une personne bâton à gauche ou à droite de votre diagramme.\cite{IBM}
+                
+                Des lignes simples sont utilisées pour décrire les relations entre les acteurs et les cas d'utilisation,
+		comme le montre la figure.\cite{IBM}
+                
+                \begin{figure}[!h] 
+                    \center 
+                    \includegraphics[width=0.7\textwidth,keepaspectratio]{images/use case exemple.png} 
+                    \caption{Exemple de diagramme de cas d'utilisation}
+                    \label{UML logo}
+                \end{figure}
+                
+                \item[Diagramme de classe :]
+                Le diagramme de classes montre comment les différentes entités (personnes, choses et données)
+		sont liées les unes aux autres ; en d'autres termes, il montre les structures statiques du système.\cite{IBM}
+                
+                Une classe est représentée sur le diagramme de classe sous la forme d'un rectangle avec trois sections
+		horizontales; la section du milieu contient les attributs de la classe ;
+		et la section inférieure contient les opérations de la classe (ou « méthodes »). \cite{IBM}
+                \begin{figure}[!h] 
+                    \center 
+                    \includegraphics[width=0.2\textwidth,keepaspectratio]{images/class example.png} 
+                    \caption{Exemple d'une classe}
+                    \label{UML logo}
+                \end{figure}
+                
+                Les classes sont liées entre elles grâce à différents type de relations
+                \begin{figure}[!h] 
+                    \center 
+                    \includegraphics[width=0.8\textwidth,keepaspectratio]{images/diag class relation exemple.png} 
+                    \caption{Les types de relations}
+                    \label{UML logo}
+                \end{figure}
+                
+                Une relation d'association entre deux classes peut également véhiculer des informations 
+		sur le nombre de comptes d'objets (instances) à chaque extrémité de l'association.
+		Ce nombre d'objets est appelé multiplicité. Les multiplicités indiquent le nombre d'objets
+		d'une classe liés à un objet d'une autre classe.\cite{IBM}
+                
+                \begin{figure}[H] 
+                    \center 
+                    \includegraphics[width=0.7\textwidth,keepaspectratio]{images/diag classe example.png} 
+                    \caption{Exemple d'un diagramme de classe}
+                    \label{UML logo}
+                \end{figure}
+                
+                \item[Diagramme de séquence :]
+                Uml propose des diagrammes d'interaction, qui décrivent comment des groupes d'objets 
+		collaborent dans certains comportements. Le plus courant est le diagramme de séquence.\cite{fowler2004uml}
+                
+                En règle générale, un diagramme de séquence capture le comportement d'un seul scénario. 
+		Le diagramme montre un certain nombre d'exemples d'objets et les messages qui sont transmis 
+		entre ces objets dans le cas d'utilisation.\cite{fowler2004uml}
+                
+                Un diagramme de séquence a deux dimensions : la dimension verticale montre la séquence des
+		messages/appels dans l'ordre temporel dans lequel ils se produisent ; 
+		la dimension horizontale montre les instances d'objet auxquelles les messages sont envoyés.\cite{IBM}
+                
+                Le diagramme de séquence utilise un ensemble de notations pour décrire les interactions dans le temps.
+                \begin{figure}[H] 
+                    \center 
+                    \includegraphics[width=0.7\textwidth,keepaspectratio]{images/diag sequence component.png} 
+                    \caption{Les notations du diagramme de séquence}
+                    \label{Sequence diag notations}
+                \end{figure}
+            \end{description}
+
+\section{Conclusion}
+L'objectif des systèmes développés est d'automatiser et faciliter des taches, habituellement 
+qui demanderais des efforts et du temps.
+
+Le but cherché derrière le développement de notre système est de d'optimiser la recherche
+de gens compétents et de remplacer les méthodes manuelles habituelles.
+
+Nous proposons une application web qui mettra en relation deux camps, ceux qui cherchent
+des personnes compétentes qui offrent des services et ces personnes là.
+
+Dans ce chapitre, nous avons évoqué un ensemble de difficultés du quotidien sous forme 
+de problématique. Nous avons essayé de proposer une solution adéquate.
+
+Dans une partie de ce chapitre, nous avons fait une brève explication du langage de 
+modélisation que nous allons utiliser pour la réalisation de cette application, qui est l'UML.
+
+Des explications sur l'utilité d'utiliser un langage de modélisation ont été évoqués ainsi
+que les différents principaux diagrammes que nous utiliserons dans les prochaines étapes du développement.
+
 
 %Fin du chapitre 1
+
+
 
 %Début du chapitre 2
 \chapter{Analyse et Conception}
@@ -205,78 +349,6 @@ application. Nous utiliserons une démarche généralisée basé sur UP qui util
 le langage UML. Les diagrammes UML utilisés sont les suivant: Diagramme de cas
 d'utilisation, diagrammes de séquence, et les diagrammes de classes\rmq{Pas la
 peine de le dire(, qui sont modélisés l'aide de l'outil Draw.io.)}
-
-\section{Le processus unifié}
-
-Le processus unifié est un processus de développement logiciel orientés objets,
-centré sur l'architecture, piloté par des cas d'utilisation, et orienté vers la
-diminution des risques. C'est une méthode générique et itérative \cite{UP}
-\rmq{Vous pouvez en dire plus?}
-
-\begin{figure}[h] 
-    \center 
-    \includegraphics[width=\linewidth]{images/Screenshot(1).png} 
-    \caption{UP est itératif}
-\end{figure}
-
-\section{Langage de modélisation UML}
-
-UML est né de la fusion des 3 principales méthodes d'analyse et de conception
-parues pendant les années 90. Ces méthodes sont OMT (Object Modeling Technique),
-BOOCH, et OOSE.\rmq{(référence)}
-
-James Rumbaugh (créateur de OMT) et GradyBooch (créateur de BOOCH) se sont
-retrouvés au sein de la société \emph{Rational Software} et ont été ensuite
-rejoints par lavr Jacobson (créateur de OOSE) en se donnant comme objectif de
-fusionner leur méthodes et créer UML (UnifiedMethodeLanguage).
-
-UML est donc une norme du langage de modélisation objet qui a été publiée, dans
-sa première version, en novembre 1997 par l'OMG (Object Managment Group),
-instance de normalisation internationale du domaine de l'objet.
-
-\subsection{Définition}
-
-L'acronyme UML signifie \emph{``Langage de modélisation unifié"}. C'est un
-langage visuel constitué d'un ensemble de schémas appelés \emph{diagrammes}, qui
-modélisent les besoins du logiciel. Chaque diagramme donne une vision différente
-du projet et représente le logiciel à développer: son fonctionnement, sa mise en
-route, les actions susceptibles d'être effectuées par le logiciel, etc.
-\cite{UML2}
-
-\begin{figure}[!h] 
-    \center 
-    \includegraphics[width=1\linewidth]{images/uml-logo-large.jpg} 
-    \caption{UML Logo}
-\end{figure}
-
-\subsection{Les diagrammes}
-
-\begin{description}
-    \item[Diagramme de classes :]
-        Les diagrammes de classes expriment de manière générale la structure
-        statique d'un système, en termes de classes et de relations entre ces
-        classes. Outre les classes, ils représentent un ensemble d'interfaces
-        et de paquetages, ainsi que leurs relations.\cite{UML3}
-
-    \item[Diagramme de cas d'utilisation:]
-        Les diagrammes de cas d'utilisation représentent un ensemble \rmq{de cas
-        d'utilisation}, d'acteurs, et leurs relations. Ils représentent la vue
-        statique des cas d'utilisation d'un système et sont particulièrement
-        importants dans l'organisation et la modélisation du comportement d'un
-        système. \cite{UML3}
-
-    \item[Diagramme de séquence :]
-        Un diagramme de séquence met en évidence le classement des messages par
-        ordre chronologique. On forme un diagramme de séquence en plaçant
-        d'abord les objets qui participent à l'interaction en haut du diagramme.
-        Le long de l'axe des abscisses. En général, on place l'objet qui débute
-        l'interaction à gauche, puis on continue en progressant vers la droite,
-        les objets les plus subordonnés étant tout à fait à droite. On place
-        ensuite les messages envoyés et reçus par ces objets le long de l'axe
-        des ordonnées, par ordre chronologique, du haut vers le bas. Cela donne
-        au lecteur une indication visuelle claire du flot de contrôle dans le
-        temps. \cite{UML3}
-\end{description}
 
 \subsection{Identification des acteurs et leurs rôles }
 
