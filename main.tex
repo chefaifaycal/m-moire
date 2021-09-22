@@ -10,6 +10,11 @@
 \usepackage{array}
 \usepackage{multirow}
 \usepackage{biblatex}
+\usepackage{svg}
+\usepackage[a4paper, portrait, margin=3.5cm]{geometry}
+\usepackage{capt-of,booktabs}
+\usepackage{pdflscape}
+
 \addbibresource{Biblio.bib}
 
 \newcommand\rmq[1]{\textcolor{red}{\tt #1}}
@@ -338,55 +343,42 @@ que les différents principaux diagrammes que nous utiliserons dans les prochain
 %Début du chapitre 2
 \chapter{Analyse et Conception}
 
-\section{Introduction}
 
-L'analyse et la conception est un procédé essentiel du processus de
-développement qui a pour objectif de formaliser les étapes préliminaires du
-développement d'un système afin de satisfaire les besoins du client.
-
-Dans ce chapitre, nous mettrons en évidence le coté conceptuel de notre
-application. Nous utiliserons une démarche généralisée basé sur UP qui utilise
-le langage UML. Les diagrammes UML utilisés sont les suivant: Diagramme de cas
-d'utilisation, diagrammes de séquence, et les diagrammes de classes\rmq{Pas la
-peine de le dire(, qui sont modélisés l'aide de l'outil Draw.io.)}
-
-\subsection{Identification des acteurs et leurs rôles }
-
+\section{Identification des acteurs et leurs rôles }
 Dans notre système, on distingue les acteurs suivants :
 
-\begin{table}[h!]
+    \begin{table}[h!]
     \centering
-    \begin{tabular}{ |m{4cm}|m{4cm}|m{4cm}| }
+    \begin{tabular}{ |m{3cm}|m{3cm}|m{5.5cm}| }
     \hline
     \textbf{Acteurs} & \textbf{Codification} & \textbf{Rôle} \\
     \hline
-    Administrateur & Admin & Gérer le système en effectuant des opérations
-        d'ajout, suppression et modification sur la base de données.\\
+    Administrateur & Admin & Gérer le système en effectuant des opérations d'ajout,
+    de modification et de suppression sur la base de données \\
     \hline
-    Client & Client & Inscription, connexion,  consultation de service,
-        Contacter des fournisseur, laisser des avis, commander des services,
-        gérer ses commandes.\\
+    Client & Client & Inscription, connexion, consultation de services, contacter des fournisseurs,
+    laisser des avis, commander des services, gérer ses commandes \\
     \hline
-    Fournisseur & Fournisseur & Inscription, connexion, gestion de services,
-        gestion de la messagerie.\\
+    Fournisseur & Fournisseur & Inscription, connexion, gestion de services, gestion de la messagerie \\
     \hline
     \end{tabular}
-    \caption{Identification des acteurs et leurs rôles}
+    \caption{Identification des acteurs et leurs rôles.}
     \label{Tableaux:1}
-\end{table}
+    \end{table}
 
-\subsection{Identification des cas d'utilisations}
+\section{Identification des cas d'utilisations}
 \begin{table}[H]
     \centering
     \begin{tabular}{|m{5cm}|m{5cm}|}
         \hline
-        \textbf{Cas d'utilisation} & \textbf{Acteurs} \\
+         \textbf{Cas d'utilisation} & \textbf{Acteurs} \\
         \hline
         Inscription & \multirow{5}{5cm}{Client, Fournisseur} \\
-        Connexion & \\
+        Authentification & \\
         Gestion des commandes & \\
         Gestion des avis & \\
         Gestion des messages & \\
+        Modification du compte & \\
         \hline
         Consultation de services & \multirow{2}{5cm}{Client} \\
         Recherche de services & \\
@@ -401,231 +393,433 @@ Dans notre système, on distingue les acteurs suivants :
         Gestion des messages & \\
         Gestion des commandes & \\
         Gestion des avis & \\
-        Gestion des services & \\
+        Suppression des services & \\
         \hline
     \end{tabular}
-    \caption{Identification des cas d'utilisation}
+    \caption{Identification des cas d'utilisation.}
     \label{tab:my_label}
 \end{table}
-
-\subsection{Diagrammes de cas d'utilisation}
+\newpage
+\section{Diagramme de cas d'utilisation}
 
 \begin{itemize}
-    \item \underline{Générale:}
+    \item \underline{Générale :}
         \begin{figure}[H]
             \centering
-            \includegraphics[width=1.1\textwidth]{images/use case.png}
+            \includegraphics[width=1\textwidth]{images/Use cas general.drawio.png}
             \caption{Diagramme de cas d'utilisation générale}
-            \label{fig:general_use_case}
+            \label{Use case diag}
         \end{figure}
         
+\newpage
     \item \underline{Client :} 
         \begin{figure}[H]
             \centering
-            \includegraphics[width=1.1\textwidth]{images/client use case diag.png}
+            \includegraphics[width=1\textwidth]{images/Use Case Client.drawio.png}
             \caption{Diagramme de cas d'utilisation de l'acteur Client}
-            \label{fig:client_use_case}
+            \label{fig:my_label}
         \end{figure}
+        
+\newpage
     \item \underline{Fournisseur :}
         \begin{figure}[H]
             \centering
-            \includegraphics[width=1.1\textwidth]{images/fournisseur use case diag.png}
+            \includegraphics[width=1\textwidth]{images/Use case Fournisseur.drawio.png}
             \caption{Diagramme de cas d'utilisation de l'acteur Fournisseur}
-            \label{fig:fournisseur_use_case}
+            \label{fig:my_label}
         \end{figure}
+        
+\newpage
     \item \underline{Administrateur :}
         \begin{figure}[H]
             \centering
-            \includegraphics[width=1.1\textwidth]{images/admin use case diag.png}
+            \includegraphics[width=1\textwidth]{images/Use case Administrateur.drawio.png}
             \caption{Diagramme de cas d'utilisation de l'acteur Administrateur}
-            \label{fig:admin_use_case}
+            \label{fig:my_label}
         \end{figure}
 \end{itemize}
 
-
-\subsection{Modélisation des diagrammes de séquence}
-
-Les diagrammes de séquences sont la représentation graphique des interactions
-entre les acteurs et le système selon un ordre chronologique dans la formulation
-UML. Ces communications entre les classes ‘objets' sont reconnues comme des
-messages. Le diagramme des séquences énumère des objets horizontalement, et le
-temps verticalement. Il modélise l'exécution des messages en fonction du temps.
-\cite{UML3}
-
-
-\begin{itemize}
-\item \textbf{Se connecter} 
-\end{itemize}
-
-Le diagramme de séquence suivant illustre les interactions nécessaires pour la
-connexion d'un utilisateur. Après l'inscription utilisateur peut se connecter à
-l'application, pour cela il n'a qu'à cliquer sur le bouton de connexion en
-saisissant son identifiant et son mot de passe, le système vérifie ces champs
-auprès de la base de données, si ses informations sont correctes alors il aura
-accès à l'application pour gérer les services (comme par exemple ajouter un
-service) sinon un message d'erreur sera affiché et le système lui redemande à
-nouveau de saisir ses coordonnées.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\textwidth]{images/sequence diag authentification.jpg}
-    \caption{Diagramme de séquence du cas d'utilisation "Connexion"}
-    \label{fig:my_label}
-\end{figure}
-
-\begin{itemize}
-\item  \textbf{Publication de services}
-\end{itemize}
-
-Le diagramme de séquence suivant illustre les interactions nécessaires pour la
-publication d'un  service. Après l'authentification, le fournisseur peut déposer
-un service tout en remplissant un formulaire de dépôt d'un service. Si le
-fournisseur oublie de remplir l'un des champs ou remplit un champ dans une case
-inapproprié le service ne sera pas déposé.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\textwidth]{images/sequence diag publier service.jpg}
-    \caption{Diagramme de séquence du cas d'utilisation "Publication de service"}
-    \label{fig:my_label}
-\end{figure}
-
-\begin{itemize}
-    \item \textbf{Recherche de services}
-\end{itemize}
-
-Le diagramme de séquence suivant illustre les interactions nécessaires pour la
-recherche d'un service. En effet, l'utilisateur saisit la recherche, le système
-vérifiera si le service cherché existe dans la base de données ou pas, et il
-lui affiche un résultat.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\textwidth]{images/sequence diag recherche service.jpg}
-    \caption{Diagramme de séquence du cas d'utilisation "Recherche de service"}
-    \label{fig:my_label}
-\end{figure}
-
-\begin{itemize}
-    \item \textbf{Suppression de service}
-\end{itemize}
-
-Le diagramme de séquence suivant illustre les interactions nécessaires pour la
-suppression d'un service. En effet le fournisseur choisit un service, le système
-demande à le fournisseur  une confirmation de suppression, si confirmée, le
-système vérifie l'existence de service dans la base de données, si le service
-existe la suppression va être appliquée sinon un message d'erreur sera
-affiché.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\textwidth]{images/sequence diag supp service.jpg}
-    \caption{Diagramme de séquence du cas d'utilisation "Suppression de service"}
-    \label{fig:my_label}
-\end{figure}
-
-\begin{itemize}
-    \item \textbf{Modification de compte}
-\end{itemize}
-
-Le diagramme de séquence suivant illustre les interactions nécessaires pour
-qu'un fournisseur modifie les informations de son compte. En effet, le
-fournisseur demande au système la modification de son compte, ensuite le
-système affiche le formulaire de modification et le fournisseur modifie ses
-informations, le système vérifie à nouveau les informations, si elles sont
-correctes, la base de données sera mise à jour sinon un message d'erreur sera
-affiché.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\textwidth]{images/sequence diag modifier compte.jpg}
-    \caption{Diagramme de séquence du cas d'utilisation "Modification de compte"}
-    \label{fig:my_label}
-\end{figure}
-
-\begin{itemize}
-    \item \textbf{Suppression d'un utilisateur}
-\end{itemize}
-
-Le diagramme de séquence suivant illustre les interactions nécessaires pour la
-suppression d'un utilisateur. En effet, l'administrateur choisit l'utilisateur à
-supprimer, le système vérifie son existence dans la base de données, si
-l'utilisateur existe la suppression sera appliquée sinon un message d'erreur
-sera affiché.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\textwidth]{images/sequence diag supp user.jpg}
-    \caption{Diagramme de séquence du cas d'utilisation "Suppression d'un utilisateur"}
-    \label{fig:my_label}
-\end{figure}
-
-\subsection{Diagramme de classe}
-
-Le digramme de classe permet de donner la représentation statique du système à
-développer. Cette représentation est centrée sur les concepts de classes et
-d'associations. Chaque classe est décrite par les données et les traitements dont
-elle est responsable. Nous avons pu construire le diagramme de classe indiqué
-ci-dessous ensuite le passage au modèle logique est effectué pour former la base
-de données de l'application.\rmq{Après avoir construit le diagramme de classe
-sur la Figure~\ref{fig:diag_classes}, nous avons établi un modèle relationnel
-que nous avons utilisé pour créer les différentes tables de notre base de
-données.}
-
-  \begin{figure}[H]
-    \centering
-    \includegraphics[width=1\textwidth]{images/Diag de classe.jpg}
-    \caption{Diagramme de classe"}
-    \label{fig:diag_classes}
-\end{figure}
-
-\subsection{Le schéma relationnel}
-
-Pour réaliser ce passage, nous avons suivi des règles strictes et précises
-permettant de traduire le contenu conceptuel du diagramme de classe en modèle
-relationnel. Ces règles sont:
-
-\subsubsection{Règle de passage du diagramme de classe au modèle relationnel}
-
-Nous avons pu passer du diagramme de classes au modèle relationnel en nous
-basant sur les règles suivantes:
-
-\begin{description}
-    \item[Règle 1 - Transformation des classes :] Chaque classe devient une table.
-        L'identifiant de la classe devient la clé primaire et chaque attribut de
-        classe se transforme en un champ de table.
+\section{Description textuel des cas d'utilisation}
+    La description textuel d’un cas d’utilisation permet de :
     
-    \item[Règle 2 - Association plusieurs-à-plusieurs:] Toute association sous
-        forme ( ?..*) à ( ?..*), donne naissance à trois tables, dont la table
-        dérivée de l'entité association possédera les clés primaires des deux
-        autres tables comme clé primaire, plus ses propres attributs s'il s'agit
-        d'une classe d'association.
+    \begin{itemize}
+        \item Clarifier le déroulement de la fonctionnalité 
+        \item Décrire la chronologie des actions qui devront être réalisées 
+        \item D’identifier les parties redondantes pour en déduire de cas d’utilisations
+plus précises qui seront utilisées par inclusion, extension ou généralisation 
+        \item D’indiquer d’éventuelles contraintes déjà connues et dont les développeurs
+vont devoir tenir compte lors de la réalisation du l’application, aussi les
+descriptions peuvent aider à découvrir d’autres cas d’utilisations que l’on
+pourrait ajouter. 
+    \end{itemize}
+    
+\newpage
+    \begin{description} 
+        \item[Inscription] \hfill \\
+        \begin{minipage}{\linewidth}
+        \centering
+            \def\arraystretch{2}
+            \begin{tabular}{|m{3cm}|m{9cm}|}
+                \hline
+                Titre                & Inscription  \\ 
+                \hline
+                Résumé               & L'inscription permet aux utilisateurs de s'inscrire pour pouvoir accéder 
+		au fonctionnalités de l'application \\ 
+                \hline
+                Acteurs              & - Client \newline  - Fournisseur \\ 
+                \hline
+                Pré conditions       & Aucune   \\ 
+                \hline
+                Scénario nominal     &  
+                    1. L'utilisateur demande la page d'inscription.
+                    2. Le système affiche la page d'inscription.
+                    3. L'utilisateur choisi sa catégorie. 
+                    4. Selon sa catégorie, l'utilisateur remplie un formulaire d'inscription. 
+                    5. Le système vérifie la validité des information saisies. 
+                    6. Le système insère les données dans la base de donnée. 
+                    7. Le système redirige l'utilisateur vers la page de connexion et affiche un message de succès.
+                        
+                   \\ 
+                \hline
+                Scénario alternatif &   
+                    4. L'utilisateur omet de remplir un champ. Un message d'erreur s'affiche. 
+                    5. L'utilisateur est déjà inscrit. Le système affiche un message en indiquent qu'il est déjà inscrit.
+                \\ 
+                \hline
+                Post Conditions & 
+                - La possibilité de s'authentifier 
+                
+            \\
+            \hline
+            \end{tabular}
+            \captionof{table}{Description textuel du cas d'utilisation Inscription}
+        \end{minipage}
+        
+        \item[Consultation de service] \hfill \\
+        \begin{minipage}{\linewidth}
+        \centering
+            \def\arraystretch{2}
+            \begin{tabular}{|m{3cm}|m{9cm}|}
+            \hline
+            Titre                & Consultation de service \\ 
+            \hline
+            Résumé               & La consultation de service permet aux utilisateurs de découvrir
+	    plus de détails sur le service en question et le fournisseur. \\ 
+            \hline
+            Acteurs              & - Client \\ 
+            \hline
+            Pré conditions       & Authentification \\ 
+            \hline
+            Scénario nominal     &  
+                1. L'utilisateur s'authentifie
+                2. L'utilisateur sélection le service à consulter. 
+                3. Le système affiche la page du service.
+            \\ 
+            \hline
+            Scénario alternatif &   
+                1. Authentification erronée, l'utilisateur est rediriger vers le scénario nominale Numéro 01.
+                
+            \\ 
+            \hline
+            Post Conditions & 
+                - La page du service s'affiche 
+            \\
+            \hline
+            \end{tabular}
+        \captionof{table}{Description textuel du cas d'utilisation Consultation de service}
+        \end{minipage}
+        
+\newpage
+        \item[Commande de service] \hfill \\
+        \begin{minipage}{\linewidth}
+        \centering
+            \def\arraystretch{2}
+            \begin{tabular}{|m{3cm}|m{9cm}|}
+            \hline
+            Titre                & Commande de service                                                                                                 \\ 
+            \hline
+            Résumé               & Le système donne la possibilité à l'utilisateur de commander un service.  \\ 
+            \hline
+            Acteurs              & - Client                                                                                     \\ 
+            \hline
+            Pré conditions       & Authentification                                                                                                      \\ 
+            \hline
+            Scénario nominal     &  
+                1. L'utilisateur s'authentifie. 
+                2. L'utilisateur consulte un service
+                3. Le système affiche la page du service. 
+                4. L'utilisateur clique sur le bouton commander. 
+                5. Le système sauvegarde la commande sur la base de données. 
+                \\ 
+            \hline
+            Scénario alternatif &   
+                1. Authentification erronée, l'utilisateur est rediriger vers le scénario nominale Numéro 01. 
+                
+            \\ 
+            \hline
+            Post Conditions & 
+                - Le service apparaît dans la page "Mes commandes".  
+            \\
+            \hline
+            \end{tabular}
+        \captionof{table}{Description textuel du cas d'utilisation Commande de service}
+        \end{minipage}
+        
+        %Description Textuel du cas d'utilisation gestion de la messagerie
+    \newpage
+        \item[Gestion Messagerie] \hfill \\
+        \begin{minipage}{\linewidth}
+        \centering
+            \def\arraystretch{2}
+            \begin{tabular}{|m{3cm}|m{9cm}|}
+            \hline
+            Titre                & Gestion Messagerie   \\ 
+            \hline
+            Résumé               & Le système offre la possibilité au différents utilisateurs d'échanger des messages.  \\ 
+            \hline
+            Acteurs              & - Client \newline  - Fournisseur  \\ 
+            \hline
+            Pré conditions       & Authentification  \\ 
+            \hline
+            Scénario nominal     &  
+                1. L'utilisateur s'authentifie. 
+                2. L'utilisateur demande la page de la messagerie.line
+                3. Le système affiche la page de la messagerie. 
+                4. Si l'utilisateur à déjà échanger un message :
+                	4.a L'utilisateur choisi le destinataire du message. e
+                	4.b L'utilisateur saisie le message et clique sur le bouton envoyer. 
+                	4.c Le système sauvegarde le message sur la base de données. 
+                5. Si l'utilisateur n'a échanger aucun message auparavant : 
+                	5.a L'utilisateur doit consulter un service. 
+                	5.b L'utilisateur clique sur le bouton envoyer un message. 
+                	5.c Le système affiche la page de la messagerie. 
+                	5.d L'utilisateur saisie le message et clique sur le bouton envoyer. 
+                	5.e Le système sauvegarde le message sur la base de données. 
+                \\ 
+            \hline
+            Scénario alternatif &   
+                1. Authentification erronée, l'utilisateur est rediriger vers le scénario nominale Numéro 01. 
+                4. Le champ de saisie du message est vide lors de l'envoie, le système n'effectue aucune action jusqu'à la saisie d'un message.
+                5. Le champ de saisie du message est vide lors de l'envoie, le système n'effectue aucune action jusqu'à la saisie d'un message.
+                
+            \\ 
+            \hline
+            Post Conditions & 
+                - Le destinataire reçois le message. 
+                - Le message envoier apparait dans la page de la messagerie.  
+            \\
+            \hline
+            \end{tabular}
+        \captionof{table}{Description textuel du cas d'utilisation Commande de service}
+        \end{minipage}
+        
+%Description Textuel du cas d'utilisation gestion de service
+    \newpage
+        \item[Gestion de services] \hfill \\
+        \begin{minipage}{\linewidth}
+        \centering
+            \def\arraystretch{2}
+            \begin{tabular}{|m{3cm}|m{9cm}|}
+            \hline
+            Titre                & Gestion de services \\ 
+            \hline
+            Résumé               & Le système offre la possibilité d'ajouter, modifier et supprimer un service \\ 
+            \hline
+            Acteurs              & - Fournisseur  \\ 
+            \hline
+            Pré conditions       & Authentification  \\ 
+            \hline
+            Scénario nominal     &  
+                1. L'utilisateur s'authentifie. 
+                2. L'utilisateur demande la page de la "Mes services".
+                3. Le système affiche la page "Mes services". 
+                4. Si l'utilisateur veux ajouter un service :
+                    4.a L'utilisateur clique sur le bouton "Ajouter un service". 
+                    4.b Le système affiche le formulaire d'ajout. 
+                    4.c L'utilisateur remplie le formulaire et le soumet. 
+                    4.d Le système vérifie la validité des données saisie et insère le service dans la base de donnée.
+                5. Si l'utilisateur veux modifier un service : 
+                    5.a L'utilisateur clique sur le bouton de modification. 
+                    5.b Le système affiche un formulaire. 
+                    5.c L'utilisateur mentionne les nouvelle donnée et les soumet.
+                    5.d Le système vérifie la validité des données saisie et insère le service dans la base de donnée.
+                6. Si l'utilisateur veux supprimer un service : 
+                    6.a L'utilisateur clique sur le bouton de suppression.
+                    6.b Le système supprime le service de la base de données et affiche un message de succès.
+                \\ 
+            \hline
+            Scénario alternatif &   
+                1. Authentification erronée, l'utilisateur est rediriger vers le scénario nominale Numéro 01. \newline
+                4.  Les données saisie dans le formulaire son invalide. Le système renvoie l'utilisateur vers le scénario nominale Numéro 4.
+                5.  Les données saisie dans le formulaire son invalide. Le système renvoie l'utilisateur vers le scénario nominale Numéro 5.
+                
+                
+            \\ 
+            \hline
+            Post Conditions & 
+                - Le service ajouter s'affiche dans la page "Mes services".
+                - Les modifications effectuer s'affiche dans sur la page du service.
+                - Le service supprimer n'est plus disponible sur la page "Mes services".  
+            \\
+            \hline
+            \end{tabular}
+        \captionof{table}{Description textuel du cas d'utilisation Commande de service}
+        \end{minipage}
+    \end{description}
 
-    \item[Règle 3 - Association d'un-à-plusieurs:] Toute association binaire (
-        ?..1) à ( ?..*) donne naissance à une table dérivée de l'entité de la
-        cardinalité (1..1), et sa clé primaire est déposé comme clé étrangère
-        dans la table dérivée de l'entité de la cardinalité ( ?..*).
-\end{description}
+\section{Modélisation des diagrammes de séquence}
 
-\subsubsection{Le modèle logique de données}
+Les diagrammes de séquence sont la représentation graphique des interactions entre les acteurs et le système
+selon un ordre chronologique dans la formulation UML. Ces communications entre les classes "objets" sont
+reconnues comme des messages. Le diagramme de séquence énumère des objets horizontalement et le temps 
+verticalement, il modélise l'exécution des messages en fonction du temps \cite{UML3}.
 
-\rmq{POUR\_QUOI UNE IMAGE POUR DU TEXTE?!}
+\begin{itemize}
+\item \textbf{Authentification} 
+\end{itemize}
+	Le diagramme de séquence suivant illustre les interactions nécessaires pour la connexion d'un utilisateur.
+	Après l'inscription, l'utilisateur peut se connecter à l'application. Pour cela, il n'a qu'à cliquer sur
+	le bouton de connexion en saisissant son identifiant et son mot de passe, le système vérifie ces champs
+	auprès de la base de données. Si les informations sont correctes alors il aura accès à l'application pour
+	gérer les services comme par exemple ajouter un service, sinon un message d'erreur sera affiché et 
+	le système lui redemande à nouveau de saisir ses identifiants.
+	
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=1\textwidth]{images/sequence diag authentification.jpg}
+            \caption{Diagramme de séquence du cas d'utilisation "Connexion".}
+            \label{fig:my_label}
+        \end{figure}
+        
+\begin{itemize}
+\item  \textbf{Publication de service}
+\end{itemize}
+	Le diagramme de séquence suivant illustre les interactions nécessaires pour la publication d'un service.
+	Après l'authentification, le fournisseur peut déposer un service tout en remplissant un formulaire de 
+	dépôt d'un service. Si le fournisseur oublie de remplir l'un des champs ou remplit un champ dans une case 
+	inapproprié le service ne sera pas publié.
+	
+    \begin{figure}[H]
+            \centering
+            \includegraphics[width=1\textwidth]{images/sequence diag publier service.jpg}
+            \caption{Diagramme de séquence du cas d'utilisation "Publication de service".}
+            \label{fig:my_label}
+    \end{figure}
+        
+\begin{itemize}
+\item \textbf{Recherche de service}
+\end{itemize}
+    Le diagramme de séquence suivant illustre les interactions nécessaires pour la recherche d'un service. En effet,
+    l'utilisateur saisit les critères de recherche, le système vérifie alors si le service recherché existe dans la
+    base de données ou pas, et lui affiche un résultat.
+        
+    \begin{figure}[H]
+            \centering
+            \includegraphics[width=1\textwidth]{images/sequence diag recherche service.jpg}
+            \caption{Diagramme de séquence du cas d'utilisation "Recherche de service".}
+            \label{fig:my_label}
+    \end{figure}
 
-\begin{figure}[H]
-\centering
-\includegraphics[width=1\textwidth]{images/MLD.png}
-\caption{Modèle logique de données}
-\label{fig:my_label}
-\end{figure}
+\begin{itemize}
+\item \textbf{Suppression de service}
+\end{itemize}
 
-\subsection{Conclusion}
-Dans ce chapitre, nous avons présenté le processus de développement UP, le
-langage de modélisation UML, et avons procédé à la modélisation des différents
-diagrammes: diagrammes de cas d'utilisations, diagrammes de séquences, et
-diagrammes de classes. Cette étape de modélisation nous a permis d'avoir une vue
-générale sur le comportement théorique des fonctionnalités offertes par notre
-application.  Cette base théorique nous servira de guide pour le développement
-de l'application, qui fera l'objet du chapitre suivant.
+    Le diagramme de séquence suivant illustre les interactions nécessaires pour la suppression d'un service. En effet,
+    le fournisseur choisit un service, le système lui demande une confirmation de suppression, si oui, le système 
+    vérifie l'existence de service dans la base de données, si le service existe alors la suppression va être appliquée,
+    sinon un message d'erreur va être affiché.
+        
+    \begin{figure}[H]
+            \centering
+            \includegraphics[width=1\textwidth]{images/sequence diag supp service.jpg}
+            \caption{Diagramme de séquence du cas d'utilisation "Suppression de service".}
+            \label{fig:my_label}
+    \end{figure}
+        
+        \begin{itemize}
+            \item \textbf{Modification de compte}
+        \end{itemize}
+        Le diagramme de séquence suivant illustre les interactions nécessaires pour qu'un fournisseur modifie les 
+	informations de son compte. En effet, le fournisseur  demande au système la modification de son compte,
+	ensuite le système affiche le formulaire de modification et le fournisseur  modifie ses informations,
+	le système vérifie à nouveau les informations, si elles sont correctes, la base de données sera 
+	mise à jour sinon un message d'erreur sera affiché.
+    
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=1\textwidth]{images/sequence diag modifier compte.jpg}
+            \caption{Diagramme de séquence du cas d'utilisation "Modification de compte".}
+            \label{fig:my_label}
+        \end{figure}
+        
+        \begin{itemize}
+            \item \textbf{Suppression d'un utilisateur}
+        \end{itemize}
+        Le diagramme de séquence suivant illustre les interactions nécessaires pour la suppression d'un utilisateur.
+	En effet, l'administrateur choisit l'utilisateur à supprimer, le système vérifie son existence dans la base de données,
+	si l'utilisateur existe la suppression sera appliquée sinon un message d'erreur sera affiché.
+        
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=1\textwidth]{images/sequence diag supp user.jpg}
+            \caption{Diagramme de séquence du cas d'utilisation "Suppression d'un utilisateur".}
+            \label{fig:my_label}
+        \end{figure}
+        
+        \subsection{Diagramme de classes}
+        Le digramme de classes permet de donner la représentation statique du système à développer. 
+	Cette représentation est centrée sur les concepts de classe et d'association. 
+	Chaque classe se décrit par les données et les traitements dont elle est responsable.
+	Nous avons pu construire le diagramme de classes indiqué ci-dessous ensuite le passage au modèle 
+	logique est effectué pour former la base de données de notre application.
+          \begin{figure}[H]
+            \centering
+            \includegraphics[width=1\textwidth]{images/Diag de classe.jpg}
+            \caption{Diagramme de classes.}
+            \label{fig:my_label}
+        \end{figure}
+
+        \subsection{Schéma relationnel}
+        Pour réaliser ce passage, nous avons suivi des règles strictes et précises permettant 
+	de traduire le contenu conceptuel du diagramme de classes en modèle relationnel.
+
+            \subsubsection{Règle de passage du diagramme de classes au modèle relationnel}
+            Nous avons pu passer du diagramme de classes au modèle relationnel en se basant sur les règles suivantes :
+            \begin{itemize}
+                \item \textbf{Règle 1}
+                
+                Transformation des classes : Chaque classe devient une table. L'identifiant de la classe
+		devient la clé primaire et chaque attribut de classe se transforme en un champ de table.
+                
+                \item \textbf{Règle 2}
+                
+                Association plusieurs-à-plusieurs : Toute association sous forme (?..*) à (?..*), 
+		donne naissance à trois tables, dont la table dérivée de l'entité association possédera
+		les clés primaires des deux autres tables comme clé primaire, plus ses propres attributs 
+		s'il s'agit d'une classe d'association.
+
+                \item \textbf{Règle 3}
+                
+                Association un-à-plusieurs : Toute association binaire (?..1) à (?..*) donne naissance à
+		une table dérivée de l'entité de la cardinalité (1..1), et sa clé primaire est déposé comme
+		clé étrangère dans la table dérivée de l'entité de la cardinalité (?..*).
+            \end{itemize}
+            
+            \subsubsection{Le modèle logique de données}
+           \begin{figure}[H]
+            \centering
+            \includegraphics[width=1\textwidth]{images/MLD.png}
+            \caption{Modèle logique de données.}
+            \label{fig:my_label}
+        \end{figure}
+        
+        \subsection{Conclusion}
+        Dans ce chapitre, nous avons présenté le processus de développement UP, le langage de modélisation UML,
+	et fait la modélisation des différents diagrammes : diagrammes de cas d'utilisation,
+	diagrammes de séquence et diagramme de classes. Cette étape de modélisation nous a permis
+	d'avoir une vue générale sur le comportement théorique des fonctionnalités offertes par
+	notre application. Cette base théorique nous servira de guide pour le développement de
+	l'application, qui fera l'objet du chapitre suivant.
 
 %Fin du chapitre 2
 
