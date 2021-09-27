@@ -455,39 +455,38 @@ pourrait ajouter.
     
 \newpage
     \begin{description} 
-        \item[Inscription] \hfill \\
+        \item[Inscription] \hfill \newline \\
         \begin{minipage}{\linewidth}
         \centering
             \def\arraystretch{2}
             \begin{tabular}{|m{3cm}|m{9cm}|}
                 \hline
-                Titre                & Inscription  \\ 
+                Titre                & Inscription                                                                                                 \\ 
                 \hline
-                Résumé               & L'inscription permet aux utilisateurs de s'inscrire pour pouvoir accéder 
-		au fonctionnalités de l'application \\ 
+                Résumé               & L'inscription permet aux utilisateurs de s'inscrire pour pouvoir accéder au fonctionnalités de l'application \\ 
                 \hline
-                Acteurs              & - Client \newline  - Fournisseur \\ 
+                Acteurs              & - Client \newline  - Fournisseur                                                                                     \\ 
                 \hline
-                Pré conditions       & Aucune   \\ 
+                Pré conditions       & Aucune                                                                                                      \\ 
                 \hline
                 Scénario nominal     &  
-                    1. L'utilisateur demande la page d'inscription.
-                    2. Le système affiche la page d'inscription.
-                    3. L'utilisateur choisi sa catégorie. 
-                    4. Selon sa catégorie, l'utilisateur remplie un formulaire d'inscription. 
-                    5. Le système vérifie la validité des information saisies. 
-                    6. Le système insère les données dans la base de donnée. 
-                    7. Le système redirige l'utilisateur vers la page de connexion et affiche un message de succès.
+                    1. L'utilisateur demande la page d'inscription.\newline
+                    2. Le système affiche la page d'inscription.\newline
+                    3. L'utilisateur choisi sa catégorie. \newline
+                    4. Selon sa catégorie, l'utilisateur remplie un formulaire d'inscription. \newline
+                    5. Le système vérifie la validité des information saisies. \newline
+                    6. Le système insère les données dans la base de donnée. \newline
+                    7. Le système redirige l'utilisateur vers la page de connexion et affiche un message de succès.\newline
                         
                    \\ 
                 \hline
                 Scénario alternatif &   
-                    4. L'utilisateur omet de remplir un champ. Un message d'erreur s'affiche. 
-                    5. L'utilisateur est déjà inscrit. Le système affiche un message en indiquent qu'il est déjà inscrit.
+                    4. L'utilisateur omet de remplir un champ. Un message d'erreur s'affiche. \newline
+                    5. L'utilisateur est déjà inscrit. Le système affiche un message en indiquent qu'il est déjà inscrit.\newline
                 \\ 
                 \hline
                 Post Conditions & 
-                - La possibilité de s'authentifier 
+                - La possibilité de s'authentifier \newline
                 
             \\
             \hline
@@ -495,34 +494,34 @@ pourrait ajouter.
             \captionof{table}{Description textuel du cas d'utilisation Inscription}
         \end{minipage}
         
-        \item[Consultation de service] \hfill \\
+\newpage
+        \item[Consultation de service] \hfill \newline \\
         \begin{minipage}{\linewidth}
         \centering
             \def\arraystretch{2}
             \begin{tabular}{|m{3cm}|m{9cm}|}
             \hline
-            Titre                & Consultation de service \\ 
+            Titre                & Consultation de service                                                                                                 \\ 
             \hline
-            Résumé               & La consultation de service permet aux utilisateurs de découvrir
-	    plus de détails sur le service en question et le fournisseur. \\ 
+            Résumé               & La consultation de service permet aux utilisateurs de découvrir plus de détails sur le service en question et le fournisseur. \\ 
             \hline
             Acteurs              & - Client \\ 
             \hline
-            Pré conditions       & Authentification \\ 
+            Pré conditions       & Authentification                                                                                                      \\ 
             \hline
             Scénario nominal     &  
-                1. L'utilisateur s'authentifie
-                2. L'utilisateur sélection le service à consulter. 
-                3. Le système affiche la page du service.
+                1. L'utilisateur s'authentifie\newline
+                2. L'utilisateur sélection le service à consulter. \newline
+                3. Le système affiche la page du service.\newline
             \\ 
             \hline
             Scénario alternatif &   
-                1. Authentification erronée, l'utilisateur est rediriger vers le scénario nominale Numéro 01.
+                1. Authentification erronée, l'utilisateur est rediriger vers le scénario nominale Numéro 01.\newline
                 
             \\ 
             \hline
             Post Conditions & 
-                - La page du service s'affiche 
+                - La page du service s'affiche \newline
             \\
             \hline
             \end{tabular}
@@ -530,7 +529,7 @@ pourrait ajouter.
         \end{minipage}
         
 \newpage
-        \item[Commande de service] \hfill \\
+        \item[Commande de service] \hfill \newline \\
         \begin{minipage}{\linewidth}
         \centering
             \def\arraystretch{2}
@@ -545,20 +544,20 @@ pourrait ajouter.
             Pré conditions       & Authentification                                                                                                      \\ 
             \hline
             Scénario nominal     &  
-                1. L'utilisateur s'authentifie. 
-                2. L'utilisateur consulte un service
-                3. Le système affiche la page du service. 
-                4. L'utilisateur clique sur le bouton commander. 
-                5. Le système sauvegarde la commande sur la base de données. 
+                1. L'utilisateur s'authentifie. \newline
+                2. L'utilisateur consulte un service\newline
+                3. Le système affiche la page du service. \newline
+                4. L'utilisateur clique sur le bouton commander. \newline
+                5. Le système sauvegarde la commande sur la base de données. \newline
                 \\ 
             \hline
             Scénario alternatif &   
-                1. Authentification erronée, l'utilisateur est rediriger vers le scénario nominale Numéro 01. 
+                1. Authentification erronée, l'utilisateur est rediriger vers le scénario nominale Numéro 01. \newline
                 
             \\ 
             \hline
             Post Conditions & 
-                - Le service apparaît dans la page "Mes commandes".  
+                - Le service apparaît dans la page "Mes commandes".  \newline
             \\
             \hline
             \end{tabular}
@@ -567,46 +566,49 @@ pourrait ajouter.
         
         %Description Textuel du cas d'utilisation gestion de la messagerie
     \newpage
-        \item[Gestion Messagerie] \hfill \\
+        \item[Gestion Messagerie] \hfill \newline \\
         \begin{minipage}{\linewidth}
         \centering
             \def\arraystretch{2}
             \begin{tabular}{|m{3cm}|m{9cm}|}
             \hline
-            Titre                & Gestion Messagerie   \\ 
+            Titre                & Gestion Messagerie                                                                                                 \\ 
             \hline
             Résumé               & Le système offre la possibilité au différents utilisateurs d'échanger des messages.  \\ 
             \hline
-            Acteurs              & - Client \newline  - Fournisseur  \\ 
+            Acteurs              & - Client \newline  - Fournisseur                                                                                    \\ 
             \hline
-            Pré conditions       & Authentification  \\ 
+            Pré conditions       & Authentification                                                                                                      \\ 
             \hline
             Scénario nominal     &  
-                1. L'utilisateur s'authentifie. 
-                2. L'utilisateur demande la page de la messagerie.line
-                3. Le système affiche la page de la messagerie. 
-                4. Si l'utilisateur à déjà échanger un message :
-                	4.a L'utilisateur choisi le destinataire du message. e
-                	4.b L'utilisateur saisie le message et clique sur le bouton envoyer. 
-                	4.c Le système sauvegarde le message sur la base de données. 
-                5. Si l'utilisateur n'a échanger aucun message auparavant : 
-                	5.a L'utilisateur doit consulter un service. 
-                	5.b L'utilisateur clique sur le bouton envoyer un message. 
-                	5.c Le système affiche la page de la messagerie. 
-                	5.d L'utilisateur saisie le message et clique sur le bouton envoyer. 
-                	5.e Le système sauvegarde le message sur la base de données. 
+                1. L'utilisateur s'authentifie. \newline
+                2. L'utilisateur demande la page de la messagerie. \newline
+                3. Le système affiche la page de la messagerie. \newline
+                4. Si l'utilisateur à déjà échanger un message :\newline
+                	4.a L'utilisateur choisi le destinataire du message. \newline
+                	4.b L'utilisateur saisie le message et clique sur le bouton envoyer. \newline
+                	4.c Le système sauvegarde le message sur la base de données. \newline
+                5. Si l'utilisateur n'a échanger aucun message auparavant : \newline
+                	5.a L'utilisateur doit consulter un service. \newline
+                	5.b L'utilisateur clique sur le bouton envoyer un message. \newline
+                	5.c Le système affiche la page de la messagerie. \newline
+                	5.d L'utilisateur saisie le message et clique sur le bouton envoyer. \newline
+                	5.e Le système sauvegarde le message sur la base de données. \newline
                 \\ 
             \hline
             Scénario alternatif &   
-                1. Authentification erronée, l'utilisateur est rediriger vers le scénario nominale Numéro 01. 
-                4. Le champ de saisie du message est vide lors de l'envoie, le système n'effectue aucune action jusqu'à la saisie d'un message.
-                5. Le champ de saisie du message est vide lors de l'envoie, le système n'effectue aucune action jusqu'à la saisie d'un message.
+                1. Authentification erronée, l'utilisateur est rediriger vers le 
+		scénario nominale Numéro 01. \newline
+                4. Le champ de saisie du message est vide lors de l'envoie, le système 
+		n'effectue aucune action jusqu'à la saisie d'un message.\newline
+                5. Le champ de saisie du message est vide lors de l'envoie, le système
+		n'effectue aucune action jusqu'à la saisie d'un message.\newline
                 
             \\ 
             \hline
             Post Conditions & 
-                - Le destinataire reçois le message. 
-                - Le message envoier apparait dans la page de la messagerie.  
+                - Le destinataire reçois le message. \newline
+                - Le message envoyer apparaît dans la page de la messagerie.  \newline
             \\
             \hline
             \end{tabular}
@@ -615,51 +617,54 @@ pourrait ajouter.
         
 %Description Textuel du cas d'utilisation gestion de service
     \newpage
-        \item[Gestion de services] \hfill \\
+        \item[Gestion de services] \hfill \newline \\
         \begin{minipage}{\linewidth}
         \centering
             \def\arraystretch{2}
             \begin{tabular}{|m{3cm}|m{9cm}|}
             \hline
-            Titre                & Gestion de services \\ 
+            Titre                & Gestion de services                                                                                                 \\ 
             \hline
             Résumé               & Le système offre la possibilité d'ajouter, modifier et supprimer un service \\ 
             \hline
-            Acteurs              & - Fournisseur  \\ 
+            Acteurs              & - Fournisseur                                                                                    \\ 
             \hline
-            Pré conditions       & Authentification  \\ 
+            Pré conditions       & Authentification                                                                                                      \\ 
             \hline
             Scénario nominal     &  
-                1. L'utilisateur s'authentifie. 
-                2. L'utilisateur demande la page de la "Mes services".
-                3. Le système affiche la page "Mes services". 
-                4. Si l'utilisateur veux ajouter un service :
-                    4.a L'utilisateur clique sur le bouton "Ajouter un service". 
-                    4.b Le système affiche le formulaire d'ajout. 
-                    4.c L'utilisateur remplie le formulaire et le soumet. 
-                    4.d Le système vérifie la validité des données saisie et insère le service dans la base de donnée.
-                5. Si l'utilisateur veux modifier un service : 
-                    5.a L'utilisateur clique sur le bouton de modification. 
-                    5.b Le système affiche un formulaire. 
-                    5.c L'utilisateur mentionne les nouvelle donnée et les soumet.
-                    5.d Le système vérifie la validité des données saisie et insère le service dans la base de donnée.
-                6. Si l'utilisateur veux supprimer un service : 
-                    6.a L'utilisateur clique sur le bouton de suppression.
-                    6.b Le système supprime le service de la base de données et affiche un message de succès.
+                1. L'utilisateur s'authentifie. \newline
+                2. L'utilisateur demande la page de la "Mes services". \newline
+                3. Le système affiche la page "Mes services". \newline
+                4. Si l'utilisateur veux ajouter un service :\newline
+                    4.a L'utilisateur clique sur le bouton "Ajouter un service". \newline
+                    4.b Le système affiche le formulaire d'ajout. \newline
+                    4.c L'utilisateur remplie le formulaire et le soumet. \newline
+                    4.d Le système vérifie la validité des données saisie et insère le service dans la base de donnée.\newline
+                5. Si l'utilisateur veux modifier un service : \newline
+                    5.a L'utilisateur clique sur le bouton de modification. \newline
+                    5.b Le système affiche un formulaire. \newline
+                    5.c L'utilisateur mentionne les nouvelle donnée et les soumet.\newline
+                    5.d Le système vérifie la validité des données saisie et insère le service\newline dans la base de donnée.\newline
+                6. Si l'utilisateur veux supprimer un service : \newline
+                    6.a L'utilisateur clique sur le bouton de suppression.\newline
+                    6.b Le système supprime le service de la base de données et affiche un message de succès.\newline
                 \\ 
             \hline
             Scénario alternatif &   
-                1. Authentification erronée, l'utilisateur est rediriger vers le scénario nominale Numéro 01. \newline
-                4.  Les données saisie dans le formulaire son invalide. Le système renvoie l'utilisateur vers le scénario nominale Numéro 4.
-                5.  Les données saisie dans le formulaire son invalide. Le système renvoie l'utilisateur vers le scénario nominale Numéro 5.
+                1. Authentification erronée, l'utilisateur est rediriger vers
+		le scénario nominale Numéro 03. \newline
+                4.  Les données saisie dans le formulaire son invalide.
+		Le système renvoie l'utilisateur vers le scénario nominale Numéro 4.\newline
+                5.  Les données saisie dans le formulaire son invalide. 
+		Le système renvoie l'utilisateur vers le scénario nominale Numéro 5.\newline
                 
                 
             \\ 
             \hline
             Post Conditions & 
-                - Le service ajouter s'affiche dans la page "Mes services".
-                - Les modifications effectuer s'affiche dans sur la page du service.
-                - Le service supprimer n'est plus disponible sur la page "Mes services".  
+                - Le service ajouter s'affiche dans la page "Mes services".\newline
+                - Les modifications effectuer s'affiche dans sur la page du service.\newline
+                - Le service supprimer n'est plus disponible sur la page "Mes services".  \newline
             \\
             \hline
             \end{tabular}
@@ -669,74 +674,144 @@ pourrait ajouter.
 
 \section{Modélisation des diagrammes de séquence}
 
-Les diagrammes de séquence sont la représentation graphique des interactions entre les acteurs et le système
-selon un ordre chronologique dans la formulation UML. Ces communications entre les classes "objets" sont
-reconnues comme des messages. Le diagramme de séquence énumère des objets horizontalement et le temps 
-verticalement, il modélise l'exécution des messages en fonction du temps \cite{UML3}.
+Les diagrammes de séquence sont la représentation graphique des interactions entre 
+les acteurs et le système selon un ordre chronologique dans la formulation UML.
+Ces communications entre les classes "objets" sont reconnues comme des messages.
+Le diagramme de séquence énumère des objets horizontalement et le temps verticalement,
+il modélise l'exécution des messages en fonction du temps \cite{UML3}.
+
+\begin{itemize}
+\item \textbf{Inscription} 
+\end{itemize}
+	Le diagramme de séquence suivant illustre les interactions nécessaires
+	pour l'inscription d'un utilisateur.
+	
+	Pour se faire, l'utilisateur se rend sur la page d'inscription.
+	Un choix lui est offert, soit il s'inscrit en tant que client ou fournisseur.
+	
+	Selon son choix, un formulaire adéquat sera affiché. 
+	L'utilisateur doit le remplir avec soin. En cas d'erreur, un message sera affiché indiquent l'erreur survenue.
+	
+	Après cette étape, l'utilisateur sera inscrit est pourras se connecter.
+	
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=1\textwidth]{images/Untitled Diagram.drawio.png}
+            \caption{Diagramme de séquence du cas d'utilisation "Inscription".}
+            \label{fig:my_label}
+        \end{figure}
+        
 
 \begin{itemize}
 \item \textbf{Authentification} 
 \end{itemize}
-	Le diagramme de séquence suivant illustre les interactions nécessaires pour la connexion d'un utilisateur.
-	Après l'inscription, l'utilisateur peut se connecter à l'application. Pour cela, il n'a qu'à cliquer sur
-	le bouton de connexion en saisissant son identifiant et son mot de passe, le système vérifie ces champs
-	auprès de la base de données. Si les informations sont correctes alors il aura accès à l'application pour
-	gérer les services comme par exemple ajouter un service, sinon un message d'erreur sera affiché et 
-	le système lui redemande à nouveau de saisir ses identifiants.
+	Le diagramme de séquence suivant illustre les interactions nécessaires pour 
+	l'authentification d'un utilisateur. Après l'inscription, l'utilisateur pourra 
+	se connecter à l'application. 
+	
+	Pour cela, il n'a qu'à cliquer sur le bouton "Connexion" en saisissant 
+	son adresse mail et son mot de passe, le système vérifie la validité des 
+	champs auprès de la base de données. Si les informations sont correctes alors 
+	il aura accès à la page principale de l'application, sinon un message d'erreur
+	sera affiché et le système lui redemande à nouveau de saisir ses identifiants.
 	
         \begin{figure}[H]
             \centering
-            \includegraphics[width=1\textwidth]{images/sequence diag authentification.jpg}
-            \caption{Diagramme de séquence du cas d'utilisation "Connexion".}
+            \includegraphics[width=1\textwidth]{images/Connexion Seq Diagram.drawio.png}
+            \caption{Diagramme de séquence du cas d'utilisation "Authentification".}
             \label{fig:my_label}
         \end{figure}
         
 \begin{itemize}
-\item  \textbf{Publication de service}
+\item  \textbf{Ajout de service}
 \end{itemize}
-	Le diagramme de séquence suivant illustre les interactions nécessaires pour la publication d'un service.
-	Après l'authentification, le fournisseur peut déposer un service tout en remplissant un formulaire de 
-	dépôt d'un service. Si le fournisseur oublie de remplir l'un des champs ou remplit un champ dans une case 
-	inapproprié le service ne sera pas publié.
+	Le diagramme de séquence suivant illustre les interactions nécessaires pour l'ajout d'un service. 
+	
+	Après l'authentification, le fournisseur peut ajouter un service se rendant dans
+	la page "Mes Services" puis en cliquant sur le bouton "Ajouter un service", un formulaire apparaîtra.
+	
+	Si il omet de renseigner un champ ou il a mâle remplie, le système affichera un message d'erreur.
+	L'utilisateur doit remplir le formulaire une nouvelle fois.
 	
     \begin{figure}[H]
             \centering
-            \includegraphics[width=1\textwidth]{images/sequence diag publier service.jpg}
-            \caption{Diagramme de séquence du cas d'utilisation "Publication de service".}
+            \includegraphics[width=1\textwidth]{images/Seq Diag Ajout Services.drawio.png}
+            \caption{Diagramme de séquence du cas d'utilisation "Ajout de service".}
             \label{fig:my_label}
     \end{figure}
         
+\newpage
 \begin{itemize}
 \item \textbf{Recherche de service}
 \end{itemize}
-    Le diagramme de séquence suivant illustre les interactions nécessaires pour la recherche d'un service. En effet,
-    l'utilisateur saisit les critères de recherche, le système vérifie alors si le service recherché existe dans la
-    base de données ou pas, et lui affiche un résultat.
+    Le diagramme de séquence suivant illustre les interactions nécessaires pour 
+    la recherche d'un service. En effet, l'utilisateur saisit les critères de recherche,
+    le système vérifie alors si le service recherché existe dans la base de données ou pas, et lui affiche un résultat.
         
     \begin{figure}[H]
             \centering
-            \includegraphics[width=1\textwidth]{images/sequence diag recherche service.jpg}
+            \includegraphics[width=1\textwidth]{images/Seq Diag Recherche Services.drawio.png}
             \caption{Diagramme de séquence du cas d'utilisation "Recherche de service".}
-            \label{fig:my_label}
+            \label{Seq Diag Recherche service}
     \end{figure}
-
+    
 \begin{itemize}
-\item \textbf{Suppression de service}
+\item \textbf{Consultation de service}
 \end{itemize}
-
-    Le diagramme de séquence suivant illustre les interactions nécessaires pour la suppression d'un service. En effet,
-    le fournisseur choisit un service, le système lui demande une confirmation de suppression, si oui, le système 
-    vérifie l'existence de service dans la base de données, si le service existe alors la suppression va être appliquée,
-    sinon un message d'erreur va être affiché.
+    Le système permet au client de consulter les services de son choix.
+    
+    Après avoir effectué une recherche, le client sélection un service à consulter,
+    la base de données récupère toute les données associé a ce service puis les affiches.
         
     \begin{figure}[H]
             \centering
-            \includegraphics[width=1\textwidth]{images/sequence diag supp service.jpg}
-            \caption{Diagramme de séquence du cas d'utilisation "Suppression de service".}
-            \label{fig:my_label}
+            \includegraphics[width=1\textwidth]{images/Seq Diag Consultation de service.png}
+            \caption{Diagramme de séquence du cas d'utilisation "Consultation de service".}
+            \label{Seq Diag Consultation de service}
     \end{figure}
+    
+\begin{itemize}
+\item \textbf{Commande de service}
+\end{itemize}
+    Le système permet au client de commander un ou plusieurs services de son choix.
+    
+    Après avoir effectué une recherche, le client sélection un service à consulter,
+    puis clique sur le bouton "Commander".
+    
+    Le système insère les données relative à la commande, par exemple la date de commande,
+    l'identifiant du client, l'identifiant du fournisseur, l'identifiant du service.
+    
+    Une fois l'insertion effectué, le système affiche un message de sucées.
         
-        \begin{itemize}
+    \begin{figure}[H]
+            \centering
+            \includegraphics[width=1\textwidth]{images/Seq Diag Commande Service.drawio.png}
+            \caption{Diagramme de séquence du cas d'utilisation "Commande de service".}
+            \label{Seq Diag Commande service}
+    \end{figure}
+    
+    \begin{itemize}
+\item \textbf{Envoyer un message}
+\end{itemize}
+    La communication entre le client et le fournisseur est essentiel
+    pour le bon déroulement des commandes.
+    
+    Le système propose un moyen d'envoyer et de recevoir des messages.
+    
+    Après avoir choisi le destinataire du message, le système affiche une
+    page où le champ de saisie du message est affiché. L'utilisateur devras donc saisir son message est l'envoyer.
+    
+    Les données concernant le message seront enregistrer dans la base de données,
+    par exemple la date d'envoi, le destinataire, l'émetteur.
+        
+    \begin{figure}[H]
+            \centering
+            \includegraphics[width=1\textwidth]{images/Seq Diag Envoie Message.png}
+            \caption{Diagramme de séquence du cas d'utilisation "Envoie de Message".}
+            \label{Seq Diag Envoie message}
+    \end{figure}
+    
+    \begin{itemize}
             \item \textbf{Modification de compte}
         \end{itemize}
         Le diagramme de séquence suivant illustre les interactions nécessaires pour qu'un fournisseur modifie les 
@@ -747,521 +822,515 @@ verticalement, il modélise l'exécution des messages en fonction du temps \cite
     
         \begin{figure}[H]
             \centering
-            \includegraphics[width=1\textwidth]{images/sequence diag modifier compte.jpg}
+            \includegraphics[width=1\textwidth]{images/Seq Diag Modification de compte.drawio.png}
             \caption{Diagramme de séquence du cas d'utilisation "Modification de compte".}
-            \label{fig:my_label}
+            \label{Seq Diag Modification compte}
         \end{figure}
         
-        \begin{itemize}
-            \item \textbf{Suppression d'un utilisateur}
-        \end{itemize}
-        Le diagramme de séquence suivant illustre les interactions nécessaires pour la suppression d'un utilisateur.
-	En effet, l'administrateur choisit l'utilisateur à supprimer, le système vérifie son existence dans la base de données,
-	si l'utilisateur existe la suppression sera appliquée sinon un message d'erreur sera affiché.
-        
-        \begin{figure}[H]
-            \centering
-            \includegraphics[width=1\textwidth]{images/sequence diag supp user.jpg}
-            \caption{Diagramme de séquence du cas d'utilisation "Suppression d'un utilisateur".}
-            \label{fig:my_label}
-        \end{figure}
         
         \subsection{Diagramme de classes}
-        Le digramme de classes permet de donner la représentation statique du système à développer. 
-	Cette représentation est centrée sur les concepts de classe et d'association. 
+        Le digramme de classes permet de donner la représentation statique du système à développer.
+	Cette représentation est centrée sur les concepts de classe et d'association.
 	Chaque classe se décrit par les données et les traitements dont elle est responsable.
-	Nous avons pu construire le diagramme de classes indiqué ci-dessous ensuite le passage au modèle 
-	logique est effectué pour former la base de données de notre application.
+	Nous avons pu construire le diagramme de classes indiqué ci-dessous ensuite
+	le passage au modèle logique est effectué pour former la base de données de notre application.
           \begin{figure}[H]
             \centering
-            \includegraphics[width=1\textwidth]{images/Diag de classe.jpg}
+            \includegraphics[width=1\textwidth]{images/Diag de classe.png}
             \caption{Diagramme de classes.}
-            \label{fig:my_label}
+            \label{Classe diag}
         \end{figure}
-
+\newpage
         \subsection{Schéma relationnel}
-        Pour réaliser ce passage, nous avons suivi des règles strictes et précises permettant 
+        Pour réaliser ce passage, nous avons suivi des règles strictes et précises permettant
 	de traduire le contenu conceptuel du diagramme de classes en modèle relationnel.
 
             \subsubsection{Règle de passage du diagramme de classes au modèle relationnel}
             Nous avons pu passer du diagramme de classes au modèle relationnel en se basant sur les règles suivantes :
-            \begin{itemize}
-                \item \textbf{Règle 1}
+            \begin{description}
+                \item[Règle 1 : Transformation des classes] 
+                Chaque classe devient une table. L'identifiant de la classe devient 
+		la clé primaire et chaque attribut de classe se transforme en un champ de table.
                 
-                Transformation des classes : Chaque classe devient une table. L'identifiant de la classe
-		devient la clé primaire et chaque attribut de classe se transforme en un champ de table.
-                
-                \item \textbf{Règle 2}
-                
-                Association plusieurs-à-plusieurs : Toute association sous forme (?..*) à (?..*), 
-		donne naissance à trois tables, dont la table dérivée de l'entité association possédera
-		les clés primaires des deux autres tables comme clé primaire, plus ses propres attributs 
-		s'il s'agit d'une classe d'association.
+                \item[Règle 2 : Association plusieurs-à-plusieurs] 
+                 Toute association sous forme (?..*) à (?..*), donne naissance à trois tables,
+		 dont la table dérivée de l'entité association possédera les clés primaires 
+		 des deux autres tables comme clé primaire, plus ses propres attributs s'il s'agit d'une classe d'association.
 
-                \item \textbf{Règle 3}
+                \item[Règle 3 : Association un-à-plusieurs] 
+                Toute association binaire (?..1) à (?..*) donne naissance à une table 
+		dérivée de l'entité de la cardinalité (1..1), et sa clé primaire est déposé
+		comme clé étrangère dans la table dérivée de l'entité de la cardinalité (?..*).
                 
-                Association un-à-plusieurs : Toute association binaire (?..1) à (?..*) donne naissance à
-		une table dérivée de l'entité de la cardinalité (1..1), et sa clé primaire est déposé comme
-		clé étrangère dans la table dérivée de l'entité de la cardinalité (?..*).
-            \end{itemize}
+                \item[Règle 3 : Transformation de la relation d'héritage] 
+                
+                Le modèle relationnel ne permet pas de représenter directement une relation d'héritage, puisque que seuls les 
+                concepts de relation et de clé existent dans le modèle. \cite{scenari-community}
+                
+                Trois solutions existent pour transformer une relation d'héritage :
+                \begin{itemize}
+                    \item Représenter l'héritage par une référence entre la classe mère et la classe fille.\cite{scenari-community}
+                    \item Représenter uniquement les classes filles par une relation chacune.\cite{scenari-community}
+                    \item Représenter uniquement la classe mère par une seule relation.\cite{scenari-community}
+                \end{itemize}
+                
+                Nous avons choisi d'appliquer la solution numéro 3 :
+                \begin{itemize}
+                    \item Seule la classe mère est représentée par une relation
+		    (ses classes filles ne sont pas représentées par des relations).\cite{scenari-community}
+                    \item Tous les attributs de chaque classe fille sont réintégrés au niveau de la classe mère.\cite{scenari-community}
+                    \item La clé primaire de la classe mère est utilisée pour identifier la relation.\cite{scenari-community}
+                    \item Un attribut supplémentaire de discrimination   (pour "type"), est ajouté à la classe mère, afin de t distinguer les tuples.\cite{scenari-community}
+                \end{itemize}  
+                
+                \textbf{Exemple : }
+                \begin{figure}[H]
+                    \centering
+                    \includegraphics[width=1\textwidth]{images/Screenshot 2021-09-26 at 11-31-04 Transformation de l'héritage en relationnel - rel3 pdf.png}
+                    \caption{Exemple de transformation de la relation d'héritage.}
+                    \label{exemple régle 4}
+                \end{figure}
+            \end{description}
             
             \subsubsection{Le modèle logique de données}
-           \begin{figure}[H]
-            \centering
-            \includegraphics[width=1\textwidth]{images/MLD.png}
-            \caption{Modèle logique de données.}
-            \label{fig:my_label}
-        \end{figure}
+           
+           \textbf{Utilisateur}( \underline{id}, Type, Nom, Prenom, Date\_naissance,
+	   Num\_telephone\_personnel, Num\_telephone\_professionnel, Email, Mot\_passe,
+	   Date\_inscription, Photo\_profile\_utl, Statut\_connexion ).
+           
+           \textbf{Metier}( \underline{id\_metier}, Nom\_metier ).
+           
+           \textbf{Service}( \underline{id}, Titre, Tarif, Description, Duree\_delivration,
+	   Date\_mise\_en\_ligne, Date\_fin\_validité, \#id ).
+           
+           \textbf{Categories}( \underline{id\_categorie}, Nom\_categorie ).
+           
+           \textbf{Image}( \underline{id\_image}, url\_image ).
+           
+           \textbf{Possede}( \underline{\#id, \#id\_metier} ).
+           
+           \textbf{Avis}( \underline{id\_avis}, date, note, commentaire, \#id, \#id ).
+           
+           \textbf{Message}( \underline{id\_message}, Contenu\_message, Date\_message, \#id, \#id ).
+           
+           \textbf{Commande}( \underline{\#id\_commande, \#id\_service}, date\_commande ).
+           
+           \textbf{Appartient}( \underline{\#id, \#id\_categorie} ).
         
         \subsection{Conclusion}
-        Dans ce chapitre, nous avons présenté le processus de développement UP, le langage de modélisation UML,
-	et fait la modélisation des différents diagrammes : diagrammes de cas d'utilisation,
-	diagrammes de séquence et diagramme de classes. Cette étape de modélisation nous a permis
-	d'avoir une vue générale sur le comportement théorique des fonctionnalités offertes par
-	notre application. Cette base théorique nous servira de guide pour le développement de
+        Dans ce chapitre, nous avons présenté le processus de développement UP,
+	le langage de modélisation UML, et fait la modélisation des
+	différents diagrammes : diagrammes de cas d'utilisation, diagrammes de séquence 
+	et diagramme de classes. Cette étape de modélisation nous a permis d'avoir une 
+	vue générale sur le comportement théorique des fonctionnalités offertes par notre
+	application. Cette base théorique nous servira de guide pour le développement de 
 	l'application, qui fera l'objet du chapitre suivant.
-
 %Fin du chapitre 2
 
 %Début du chapitre 3
 
-\chapter{Réalisation et implémentions}
+\chapter{Réalisation et implémentation}
 
-\section{Introduction}
-
-Depuis le début de ce projet, nous avons bien déterminé les perspectives de
-l'application en commençant par une étude préalable, qui nous a permis d'avoir
-un objectif bien concret. Puis en arrivant à l'analyse, nous avons pu avoir une
-idée bien claire sur comment va être notre application web, et c'est ce qui nous
-a mené à mieux comprendre ses fonctionnalités. Dans ce chapitre, nous allons
-nous appuyer sur la conception réalisée dans le chapitre précédent afin de
-présenter la concrétisation de l'application à travers son implémentions. Nous
-allons commencer par présenter les différents langages de développement ainsi
-que les outils de travail utilisés dans notre démarche, nous allons ensuite
-présenter en détail le principe de fonctionnement de ses outils, nous allons
-finir en présentant les interfaces des pages web de notre application ainsi que
-les différentes actions possibles à effectuer dans ces pages.
+    \section{Introduction}
+    Depuis le début de ce projet, nous avons bien déterminé les perspectives de l'application 
+    en commençant par une étude préalable, qui nous a permis d'avoir un objectif bien concret.
+    Puis, en arrivant à l'analyse, nous avons pu avoir une idée bien claire sur comment va
+    être notre application web, et c'est ce qui nous a mené à mieux comprendre ses fonctionnalités.
+    Dans ce chapitre, nous allons nous appuyer sur la conception réalisée dans le chapitre 
+    précédent afin de présenter la concrétisation de l'application à travers son implémentation.
+    Nous allons commencer par présenter les différents langages de développement ainsi
+    que les outils de travail utilisés dans notre démarche, nous allons ensuite présenter
+    en détail le principe de fonctionnement de ses outils, nous allons finir en présentant 
+    les interfaces des pages web de notre application ainsi que les différentes actions possibles à effectuer sur ces pages.
     
-\section{Outils et environnement de développement}
-
-\subsection{XAMPP}
-
-XAMPP est l'environnement de développement PHP le plus populaire (\rmq{sous
-windows}). XAMPP est une distribution Apache entièrement gratuite et facile à
-installer contenant MySQL, PHP et Perl. Le paquetage open source XAMPP a été mis
-au point pour être incroyablement facile à installer et à utiliser.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.5\textwidth]{images/1024px-Xampp_logo.svg.png}
-    \caption{Logo de XAMPP}
-    \label{fig:my_label}
-\end{figure}
+    \section{Outils et environnement de développement}
+        \subsection{XAMPP}
+        XAMPP est l'environnement de développement PHP le plus populaire sous Windows. 
+	XAMPP est une distribution Apache entièrement gratuite et facile à installer contenant MySQL,
+	PHP et Perl. Le paquetage open source XAMPP a été mis au point pour être incroyablement facile à installer et à utiliser.
         
-\subsection{MYSQL}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.3\textwidth]{images/1024px-Xampp_logo.svg.png}
+            \caption{Logo de XAMPP.}
+            \label{fig:my_label}
+        \end{figure}
         
-MySQL est un système de gestion de base de données relationnel, un langage de
-requêtes vers les bases de données exploitant le modèle relationnel et utilise
-le langage SQL comme langage de requête. SQL est un langage de manipulation de
-bases de données mis au point dans la années 70 par IBM, il permet d'exécuter
-trois types de manipulations :
+        \subsection{MYSQL}
+        
+        MySQL est un système de gestion de base de données relationnel, un langage de 
+	requêtes vers les bases de données exploitant le modèle relationnel et utilise 
+	le langage SQL comme langage de requête. SQL est un langage de manipulation de 
+	bases de données mis au point dans les années 70 par IBM, il permet d'exécuter
+	trois types de manipulations \cite{memoire} :
+        
+        \begin{enumerate}
+            \item La manipulation des tables : Création, suppression, modification de la structure;
+            \item Les manipulations des données de la base : Sélection, modification, suppression d'enregistrements;
+            \item La gestion des droits d’accès aux tables : Contrôle des données, droit d'accès, validation des modifications. 
+        \end{enumerate}
 
-\begin{enumerate}
-    \item La manipulation des tables : Création, suppression, modification de la
-        structure.
-    \item Les manipulations des données de la base : Sélection, modification,
-        suppression d'enregistrement.
-    \item La gestion des droits d'accès aux tables : Contrôle des données, droit
-        d'accès, validation des modifications. \cite{memoire}
-\end{enumerate}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.3\textwidth]{images/1200px-MySQL.svg.png}
+            \caption{Logo de MySQL.}
+            \label{fig:my_label}
+        \end{figure}
+        
+        \subsection{IDE Visual Studio Code}
+        Visual Studio Code est un éditeur de code extensible développé par Microsoft pour Windows,
+	Linux et macOS. Les fonctionnalités incluent la prise en charge du débogage,
+	la mise en évidence de la syntaxe, la complétion intelligente du code, les snippets,
+	la refactorisation du code et Git intégré \cite{ide}.
+        
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.1\textwidth]{images/1024px-Visual_Studio_Code_1.35_icon.svg.png}
+            \caption{Logo de VS Code.}
+            \label{fig:my_label}
+        \end{figure}
+        
+         \subsection{Draw.io}
+        C'est une application gratuite en ligne, accessible via le navigateur qui
+	permet de dessiner des diagrammes ou des organigrammes. Cet outil nous
+	propose de concevoir toutes sortes de diagrammes, de dessins vectoriels,
+	de les enregistrer ou de les exporter en format image, XML, PDF, etc.
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.5\textwidth]{images/1200px-MySQL.svg.png}
-    \caption{Logo de MySQL}
-    \label{fig:my_label}
-\end{figure}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.3\textwidth]{images/drawio.jpg}
+            \caption{Logo de Draw.io.}
+            \label{fig:my_label}
+        \end{figure}
+        
+         \subsection{Git}
+        Git est un logiciel de gestion de versions décentralisé. C'est un logiciel
+	libre créé par Linus Torvalds, auteur du noyau Linux, et distribué selon 
+	les termes de la licence publique générale GNU version 2. Le principal 
+	contributeur actuel de Git et depuis plus de 16 ans est Junio C Hamano.
+	En 2016, il s'agit du logiciel de gestion de versions le plus populaire
+	qui est utilisé par plus de douze millions de personnes.
 
-\subsection{IDE Visual Studio Code}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.3\textwidth]{images/1280px-Git-logo.svg.png}
+            \caption{Logo de Git.}
+            \label{fig:my_label}
+        \end{figure}
+        
+    \subsection{Langages de programmation}
+        \subsubsection{HTML}
+        HTML signifie « HyperText Markup Language » qu'on peut traduire par « langage de balises pour l'hypertexte ».
+	Il est utilisé afin de créer et de représenter le contenu d'une page web et sa structure. 
+	D'autres technologies sont utilisées avec HTML pour décrire la présentation 
+	d'une page (CSS) et/ou ses fonctionnalités interactives (JavaScript) \cite{html}.
 
-Visual Studio Code est un éditeur de code extensible développé par Microsoft
-pour Windows, Linux et macOS. Les fonctionnalités incluent la prise en charge du
-débogage, la mise en évidence de la syntaxe, la complétion intelligente du code,
-les snippets, la refactorisation du code et Git intégré. \cite{ide}
+        HTML fonctionne grâce à des « balises » qui sont insérées au sein d'un texte normal.
+	Chacune de ces balises indique la signification de telle ou telle portion de texte 
+	dans le site, par exemple <head>, <title>, <body>, <header>, <footer>, <article>, 
+	<section>, <p>, <div>, <span>, <img> et bien d'autres encore. Ces éléments forment 
+	les blocs utilisés pour construire un site web \cite{html}.
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.3\textwidth]{images/1024px-Visual_Studio_Code_1.35_icon.svg.png}
-    \caption{Logo de VS Code}
-    \label{fig:my_label}
-\end{figure}
+        On parle d'« hypertexte » en référence aux liens qui connectent les pages web entre elles \cite{html}.
 
-\subsection{Draw.io}
-
-C'est une application gratuite en ligne, accessible via le navigateur qui permet
-de dessiner des diagrammes ou des organigrammes. Cet outil nous propose de
-concevoir toutes sortes de diagrammes, de dessins vectoriels, de les enregistrer
-ou de les exporter en format image, XML,PDF, etc.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.5\textwidth]{images/drawio.jpg}
-    \caption{Logo de Draw.io}
-    \label{fig:my_label}
-\end{figure}
-
-\subsection{Git}
-
-Git est un logiciel de gestion de versions décentralisé. C'est un logiciel libre
-créé par Linus Torvalds, auteur du noyau Linux, et distribué selon les termes de
-la licence publique générale GNU version 2. Le principal contributeur actuel de
-git et depuis plus de 16 ans est Junio C Hamano. En 2016, il s'agit du logiciel
-de gestion de versions le plus populaire qui est utilisé par plus de douze
-millions de personnes.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.5\textwidth]{images/1280px-Git-logo.svg.png}
-    \caption{Logo de Git}
-    \label{fig:my_label}
-\end{figure}
-
-\subsection{Langages de programmation}
-
-\subsubsection{HTML}
-
-HTML signifie « HyperText Markup Language » qu'on peut traduire par « langage de
-balises pour l'hypertexte ». Il est utilisé afin de créer et de représenter le
-contenu d'une page web et sa structure. D'autres technologies sont utilisées
-avec HTML pour décrire la présentation d'une page (CSS) et/ou ses
-fonctionnalités interactives (JavaScript).\cite{html}
-
-HTML fonctionne grâce à des « balises » qui sont insérées au sein d'un texte
-normal. Chacune de ces balises indique la signification de telle ou telle
-portion de texte dans le site, par exemple <head>, <title>, <body>, <header>,
-<footer>, <article>, <section>, <p>, <div>, <span>, <img> et bien d'autres
-encore. Ces éléments forment les blocs utilisés pour construire un site
-web.\cite{html}
-
-On parle d'« hypertexte » en référence aux liens qui connectent les pages web
-entre elles. \cite{html}
-
-\subsubsection{CSS }
-
-Cascading Style Sheets (CSS) est un langage de feuille de style utilisé pour
-décrire la présentation d'un document écrit en HTML ou en XML. CSS décrit la
-façon dont les éléments doivent être affichés à l'écran, sur du papier, en
-vocalisation, ou sur d'autres supports.\cite{css}
-
-CSS est l'un des langages principaux du Web ouvert et a été standardisé par le
-W3C. Ce standard évolue sous forme de niveaux (levels), CSS1 est désormais
-considéré comme obsolète, CSS2.1 correspond à la recommandation et CSS3, qui est
-découpé en modules plus petits, est en voie de standardisation.\cite{css}
-
-\subsubsection{JavaScript}
-
-JavaScript (qui est souvent abrégé en « JS ») est un langage de script léger,
-orienté objet, principalement connu comme le langage de script des pages web.
-Mais il est aussi utilisé dans de nombreux environnements extérieurs aux
-navigateurs web tels que Node.js, Apache CouchDB voire Adobe Acrobat. \cite{js}
-
-Il est développé par Netscape et utilisé dans des millions de pages web et
-d'applications serveur dans le monde entier.\cite{js}
-
-Contrairement à une conception populaire, JavaScript n'est pas « du Java
-interprété ». En quelques mots, JavaScript est un langage de script dynamique
-utilisant une construction d'objets basée sur des prototypes.\cite{js}
-
-\subsubsection{PHP }
-
-PHP (Hypertext Preprocessor) est un langage de script Web intégré au HTML. Cela
-signifie que le code PHP peut être inséré dans le code HTML d'une page Web.
-\cite{php}
-
-Lors de l' accès à une page PHP , le code PHP est lu ou "analysé" par le serveur
-sur lequel la page réside. Les résultats des fonctions PHP de la page sont
-généralement renvoyés sous forme de code HTML, qui peut être lu par le
-navigateur.\cite{php}
-
-Étant donné que le code PHP est transformé en HTML avant le chargement de la
-page, les utilisateurs ne peuvent pas afficher le code PHP sur une page. Cela
-rend les pages PHP suffisamment sécurisées pour accéder aux bases de données et
-autres informations sécurisées.\cite{php}
-
-\subsubsection{Framworks et Bibliothèques utilisé}
-
-Un Framework est, comme son nom l'indique en anglais, un «  cadre de travail » .
-L'objectif d'un Framework est généralement de simplifier le travail des
-développeurs informatiques, en leur offrant une architecture "prête à l'emploi"
-et qui leur permettre de ne pas repartir de zéro à chaque nouveau projet.
-
-Les Frameworks sont comparables aux patrons de couture. Les principaux avantages
-sont donc :
-
-\begin{itemize}
-    \item La réutilisation des codes.
-    \item La standardisation de la programmation.
-    \item La formalisation d'une architecture adaptée aux besoins de chaque
-        entreprise.
-\end{itemize}
-
-À noter aussi que les Frameworks sont toujours « enrichis » de l'expérience de
-tous les développements antérieurs.
-
-Nous avons utilisé deux Frameworks :
-
-\subsubsection{Codeigniter 4}
-
-CodeIgniter est un framework de développement d'applications - une boîte à
-outils - pour les personnes qui créent des sites Web en utilisant PHP. Son
-objectif est de vous permettre de développer des projets beaucoup plus
-rapidement que si vous écriviez du code à partir de zéro, en fournissant un
-riche ensemble de bibliothèques pour les tâches courantes, ainsi qu'une
-interface simple et une structure logique pour accéder à ces bibliothèques.
-CodeIgniter vous permet de vous concentrer de manière créative sur votre projet
-en minimisant la quantité de code nécessaire pour une tâche donnée.
-
-Dans la mesure du possible, CodeIgniter est resté aussi flexible que possible,
-vous permettant de travailler comme vous le souhaitez, sans être obligé de
-travailler d'une certaine manière. Le cadre peut avoir des pièces de base
-facilement étendues ou complètement remplacées pour que le système fonctionne
-comme vous en avez besoin. En bref, CodeIgniter est le framework malléable qui
-essaie de fournir les outils dont vous avez besoin tout en restant à l'écart.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\textwidth]{images/ci-new-logo-04-02.jpg}
-    \caption{Logo de CodeIgniter}
-    \label{fig:my_label}
-\end{figure}
-
-CodeIgniter  requière l'installation d'un gestionnaire de dépendances « composer
-».
-
-Pour installer CodeIgniter  nous devons écrire dans le composer la commande
-suivante :
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\textwidth]{images/codeigniter.png}
-    \label{fig:my_label}
-\end{figure}
-
-\begin{itemize}
-    \item \textbf{Organisation de Codeigniter}
-    CodeIgniter  est composé d'une hiérarchie de dossiers et fichiers
-        représentée dans cette figure :
+        \subsubsection{CSS }
+        Cascading Style Sheets (CSS) est un langage de feuille de style utilisé pour 
+	décrire la présentation d'un document écrit en HTML ou en XML. CSS décrit la 
+	façon dont les éléments doivent être affichés à l'écran, sur du papier, en vocalisation,
+	ou sur d'autres supports \cite{css}.
+        
+        
+        CSS est l'un des langages principaux du Web ouvert et a été standardisé par le W3C.
+	Ce standard évolue sous forme de niveaux (levels), CSS1 est désormais considéré 
+	comme obsolète, CSS2.1 correspond à la recommandation et CSS3, qui est découpé 
+	en modules plus petits, est en voie de standardisation \cite{css}.
+        
+        \subsubsection{JavaScript}
+        JavaScript (qui est souvent abrégé en « JS ») est un langage de script léger,
+	orienté objet, principalement connu comme le langage de script des pages web. 
+	Mais il est aussi utilisé dans de nombreux environnements extérieurs aux navigateurs 
+	web tels que Node.js, Apache CouchDB voire Adobe Acrobat. Il est développé par 
+	Netscape et utilisé dans des millions de pages web et d'applications serveur dans le monde entier \cite{js}.
+        
+        Contrairement à une conception populaire, JavaScript n'est pas « du Java interprété ».
+	En quelques mots, JavaScript est un langage de script dynamique utilisant une construction 
+	d'objets basée sur des prototypes \cite{js}.
+        
+        \subsubsection{PHP }
+        PHP (Hypertext Preprocessor) est un langage de script Web intégré au HTML. 
+	Cela signifie que le code PHP peut être inséré dans le code HTML d'une page Web \cite{php}.
+        
+        Lors de l'accès à une page PHP, le code PHP est lu ou "analysé" par le serveur sur
+	lequel la page réside. Les résultats des fonctions PHP de la page sont généralement
+	renvoyés sous forme de code HTML, qui peut être lu par le navigateur \cite{php}.
+        
+        Étant donné que le code PHP est transformé en HTML avant le chargement de la page,
+	les utilisateurs ne peuvent pas afficher le code PHP sur une page. Cela rend les
+	pages PHP suffisamment sécurisées pour accéder aux bases de données et autres informations sécurisées \cite{php}.
+        
+    \subsubsection{Framworks et Bibliothèques utilisé}
+    Un Framework est, comme son nom l'indique en anglais, un «  cadre de travail ». L'objectif
+    d'un Framework est généralement de simplifier le travail des développeurs informatiques,
+    en leur offrant une architecture "prête à l'emploi" et qui leur permettra de ne pas repartir de zéro à chaque nouveau projet.
     
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=0.7\textwidth]{images/ci structure.png}
-        \caption{Structure de Codeigniter}
-        \label{fig:my_label}
-    \end{figure}
-
-    \item \textbf{Les Controllers}
-    
-        La grande majorité des actions qu'un utilisateur enclenche mènera à
-        l'appel d'une méthode d'un contrôleur. Les  Controllers   vont permettre
-        de gérer les différentes actions demandées par les utilisateurs lors
-        d'une action
-    
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=0.7\textwidth]{images/controlers.png}
-        \caption{Les controllers}
-        \label{fig:my_label}
-    \end{figure}
-    
-    \item \textbf{Les Models}
+    Les Frameworks sont comparables aux patrons de couture. Les principaux avantages sont donc :
     \begin{itemize}
-        \item  Le Model est la partie qui permet de stocker et de traiter les
-            donnes.  D'une manière générale en PHP et avec CodeIgniter, le model
-            n'effectue que les opérations en base de données.
-        \item Pour créer un Modele avec CodeIgniter, il faut créer un fichier
-            PHP dans le dossier system/application/models contenant une classe
-            qui hérite de la classe Model du framework de CodeIgniter. Dans
-            cette classe, on crée les fonctions qui effectuent les traitements
-            sur les donnes et qui appellent les fonctions se chargeant de
-            stocker les donnes (insertion SQL, écriture dans un fichier texte ou
-            XML) ainsi qu'un constructeur appelant le constructeur de la classe
-            Model.
+        \item La réutilisation des codes;
+        \item La standardisation de la programmation;
+        \item La formalisation d'une architecture adaptée aux besoins de chaque entreprise.
     \end{itemize}
-
-      \begin{figure}[H]
-        \centering
-        \includegraphics[width=0.7\textwidth]{images/models.png}
-        \caption{Les Models}
-        \label{fig:my_label}
-    \end{figure}
+   
+    À noter aussi que les Frameworks sont toujours « enrichis » de l'expérience de tous les développements antérieurs.
     
-    \item \textbf{Les Vues}
+    Nous avons utilisé deux Frameworks :
+
+        \subsubsection{Codeigniter 4}
+        CodeIgniter est un framework de développement d'applications - une boîte à outils -
+	pour les personnes qui créent des sites Web en utilisant PHP. Son objectif est de vous
+	permettre de développer des projets beaucoup plus rapidement que si vous écriviez du 
+	code à partir de zéro, en fournissant un riche ensemble de bibliothèques pour les 
+	tâches courantes, ainsi qu'une interface simple et une structure logique pour accéder
+	à ces bibliothèques. CodeIgniter vous permet de vous concentrer de manière créative sur 
+	votre projet en minimisant la quantité de code nécessaire pour une tâche donnée.
+
+        Dans la mesure du possible, CodeIgniter est resté aussi flexible que possible, 
+	vous permettant de travailler comme vous le souhaitez, sans être obligé de 
+	travailler d'une certaine manière. Le cadre peut avoir des pièces de base 
+	facilement étendues ou complètement remplacées pour que le système fonctionne 
+	comme vous en avez besoin. En bref, CodeIgniter est le framework malléable 
+	qui essaie de fournir les outils dont vous avez besoin tout en restant à l'écart.
+        
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.5\textwidth]{images/ci-new-logo-04-02.jpg}
+            \caption{Logo de CodeIgniter.}
+            \label{fig:my_label}
+        \end{figure}
+        
+        CodeIgniter requière l'installation d'un gestionnaire de dépendances « composer ».
+        
+        Pour installer CodeIgniter, nous devons écrire dans le composer la commande suivante :
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=1\textwidth]{images/codeigniter.png}
+            \label{CI initialisation}
+           
+        \end{figure}
+        
+        \begin{itemize}
+            \item \textbf{Organisation de Codeigniter}
+            CodeIgniter est composé d'une hiérarchie de dossiers et fichiers représentée dans cette figure :
+            
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width=0.7\textwidth]{images/ci structure.png}
+                \caption{Structure de Codeigniter.}
+                \label{CI structure}
+            \end{figure}
+        
+            \item \textbf{Les Controllers}
+            
+            La grande majorité des actions qu'un utilisateur enclenche mènera à l'appel
+	    d'une méthode d'un contrôleur. Les controllers vont permettre de gérer les
+	    différentes actions demandées par les utilisateurs lors d'une action.
+            
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width=0.5\textwidth]{images/controlers.png}
+                \caption{Les controllers.}
+                \label{CI Controllers}
+            \end{figure}
+            
+            \item \textbf{Les Models}
+            \begin{itemize}
+                \item  Le Model est la partie qui permet de stocker et de traiter les données.
+		D'une manière générale en PHP et avec CodeIgniter, le model n'effectue que les
+		opérations en base de données. 
+                \item Pour créer un Modele avec CodeIgniter, il faut créer un fichier PHP dans
+		le dossier system/application/models contenant une classe qui hérite de la
+		classe Model du framework de CodeIgniter. Dans cette classe, on crée les 
+		fonctions qui effectuent les traitements sur les données et qui appellent
+		les fonctions se chargeant de stocker les données (insertion SQL, écriture
+		dans un fichier texte ou XML) ainsi qu'un constructeur appelant le constructeur de la classe Model.
     
-    Pour afficher correctement une page Web dans le navigateur, il faut utiliser
-        une vue. C'est la vue qui est en charge de générer le code HTML.  Pour
-        créer une vue avec CodeIgniter, il suffit de créer un script PHP ou
-        HTML, qui affiche les donnes souhaites, dans le dossier
-        system/application/views. Il n'y a pas de conventions particulières.
- 
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=0.7\textwidth]{images/viewq.png}
-        \caption{Les Vues}
-        \label{fig:my_label}
-    \end{figure}
-\end{itemize}
-    
+            \end{itemize}
+              \begin{figure}[H]
+                \centering
+                \includegraphics[width=0.5\textwidth]{images/models.png}
+                \caption{Les Models.}
+                \label{fig:my_label}
+            \end{figure}
+            
+            \item \textbf{Les Vues}
+            
+            Pour afficher correctement une page Web dans le navigateur, 
+	    il faut utiliser une vue. C'est la vue qui est en charge de générer le code HTML.
+	    Pour créer une vue avec CodeIgniter, il suffit de créer un script PHP ou HTML,
+	    qui affiche les données souhaitées, dans le dossier system/application/views. 
+	    Il n'y a pas de conventions particulières.
+         
+         \begin{figure}[H]
+                \centering
+                \includegraphics[width=0.5\textwidth]{images/viewq.png}
+                \caption{Les Vues.}
+                \label{fig:my_label}
+            \end{figure}
 
-\subsubsection{TailwindCss}
 
-Tailwind CSS se décrit lui-même comme un premier framework CSS utilitaire.
-Plutôt que de se concentrer sur la fonctionnalité de l'élément stylisé, Tailwind
-est centré sur la façon dont il doit être affiché. Cela permet au développeur de
-tester plus facilement de nouveaux styles et de modifier la mise en page. Nous
-interrogeons Jen Looper sur Tailwind et sur la façon dont cette approche peut
-nous aider !
+        \end{itemize}
+        
+        \begin{description}
+            \item[]
+        \end{description}
+        
+     
+        \subsubsection{TailwindCss}
+        Tailwind CSS se décrit lui-même comme un premier framework CSS utilitaire.
+	Plutôt que de se concentrer sur la fonctionnalité de l'élément stylisé,
+	Tailwind est centré sur la façon dont il doit être affiché. Cela permet au 
+	développeur de tester plus facilement de nouveaux styles et de modifier la
+	mise en page. Nous interrogeons Jen Looper sur Tailwind et sur la façon dont
+	cette approche peut nous aider !
+        
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.5\textwidth]{images/tailwind-css-logo-vector.png}
+            \caption{Logo de Tailwindcss.}
+            \label{fig:my_label}
+        \end{figure}
+        
+        \subsubsection{La bibliothéque Grocery CRUD}
+        
+        Grocery CRUD est une bibliothéque Open Source qui permet à l'aide du framework 
+	Codeigniter de créer un panel administrateur facilement avec quelques lignes de code.
+        
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.5\textwidth]{images/logo-big.png}
+            \caption{Logo de GroceryCRUD.}
+        \end{figure}
+        
+        \begin{itemize}
+            \item \textbf{Example :}
+            
+            Un exemple très simple pour commencer est les 4 lignes de code ci-dessous.
+	    Voici les fonctions les plus courantes :
+            \begin{figure}[H]
+            \centering
+            \includegraphics[width=1\textwidth]{images/example.png}
+            \caption{Exemple d'utilisation de GroceryCrud.}
+            \label{use of grocerycrud}
+        \end{figure}
+        \end{itemize}
+        
+        \section{Captures d’écran et fonctionnement}
+            \subsection{Page d'accueil}
+            
+            La première interface que l'utilisateur rencontre lors de l'accès vers
+	    notre application est celle de l'accueil. L'utilisateur aura deux choix,
+	    soit de se connecter en cliquant sur le bouton "Connexion" s'il à déjà un compte,
+	    soit de s'inscrire en cliquant sur le bouton "Inscription" si l'utilisateur n'a pas de compte.
+            
+            Si l'utilisateur choisi de se connecter, il sera redirigé vers l'interface 
+	    d'authentification, ou l'utilisateur sera amené à saisir ses informations,
+	    dans le cas où ses informations sont correctes, la page principale sera affichée,
+	    dans le cas contraire, un message d'erreur sera affiché.
+            
+            L'utilisateur en fonction de son type (Admin, Fournisseur, Client) sera automatiquement
+	    redirigé vers la page principale qui lui correspond.
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\textwidth]{images/tailwind-css-logo-vector.png}
-    \caption{Logo de Tailwindcss}
-    \label{fig:my_label}
-\end{figure}
-
-\subsubsection{La bibliothéque Grocery CRUD}
-
-Grocery CRUD est une bibliothéque Open Source qui permet à l'aide du framework
-Codeigniter de crée un panel administrateur facilement avec quelques lignes de
-code.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\textwidth]{images/logo-big.png}
-    \caption{Logo de GroceryCRUD}
-    \label{fig:my_label}
-\end{figure}
-
-\begin{itemize}
-    \item \textbf{Example :}
-    Un exemple très simple pour commencer est les 4 lignes de code ci-dessous.
-    Voici les fonctions les plus courantes :
-    \begin{figure}[H]
-    \centering
-    \includegraphics[width=1\textwidth]{images/example.png}
-    \caption{Exemple d'utilisation de GroceryCrud}
-    \label{fig:my_label}
-\end{figure}
-\end{itemize}
-
-\section{Captures d'écran et fonctionnement}
-
-\subsection{La page d'accueil}
-    
-La première interface que l'utilisateur rencontre lors de l'accès vers notre
-application est celle de l'accueil. L'utilisateur aura deux choix, soit de se
-connecter en cliquant sur le bouton "Connexion" s'il à déjà un compte, soit de
-s'inscrire en cliquant sur le bouton "Inscription" si l'utilisateur n'a pas de
-compte.
-
-Si l'utilisateur choisi de se connecter, il sera rediriger vers l'interface
-d'authentification, ou l'utilisateur sera amener a saisir ses information, dans
-le cas ou ses informations sont correct, la page principale sera afficher, dans
-le cas contraire, un message d'erreur sera afficher.
-
-L'utilisateur en fonction de sont type (Admin, Fournisseur, Client) sera
-automatiquement rediriger vers la page principale qui lui convient
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\textwidth]{images/accueil.png}
-    \caption{Page d'accueil}
-\end{figure}
-
-\subsection{La page d'inscription}
-
-Si l'utilisateur choisi de se s'inscrire, il sera rediriger vers l'interface
-d'inscription, ou l'utilisateur sera amener remplir un formulaire d'inscription
-en mentionnant son type au préalable, le système vas vérifier la validité des
-informations saisie et les insèrent dans la base de donnée.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\textwidth]{images/inscription.png}
-    \caption{Page de pré-inscription}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\textwidth]{images/formulaire.png}
-    \caption{Formulaire d'inscription}
-\end{figure}
-
-\subsection{Interfaces coté client}
-
-L'interface principale du client se présente comme suit :
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\textwidth]{images/client dash.png}
-    \caption{Interface principale du client}
-\end{figure}
-
-Depuis cette interface, le client pourras :
-\begin{itemize}
-    \item Chercher des services selon un filtre
-    \item Voir les messages échanger
-    \item Voir les commandes effectuer et leurs état
-    \item voir les avis précédemment laisser.
-\end{itemize}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\textwidth]{images/messages.png}
-    \caption{Interface des messages échanger}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\textwidth]{images/services.png} 
-    \caption{Interface des services}
-\end{figure}
-
-Le client pourras consulter le contenu du service (Descriptions, images, tarifs)
-et pourras commander le service, contacter le fournisseur et laisser un avis.
-
- \begin{figure}[H]
-    \centering
-    \includegraphics[width=1\textwidth]{images/service consult.png} 
-    \caption{Interface des services}
-\end{figure}
-
-\subsection{Interface coté fournisseur}
-
-L'interface principale du fournisseur se présente comme suit :
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\textwidth]{images/fourni main.png} 
-    \caption{Interface coté Fournisseur}
-\end{figure}
-
-Le fournisseur pourras a travers cette interface : 
-\begin{itemize}
-    \item Voir l'ensemble de ses services et ajouter au besoin
-    \item Gérer les commandes reçu
-    \item Échanger des messages
-    \item Voir quelques statistiques
-    
-\end{itemize}
-
-\subsection{Conclusion}
-
-Après le chapitre de l'analyse et de la conception, vient la réalisation de
-l'application. Dans cette partie technique, nous avons émit les outils et les
-environnements utilisé lors de la réalisation, ainsi que les différents langages
-de programmation. Puis nous avons citer quelques fonctionnalités de notre
-application en s'appuyant sur des capture d'écrans et quelque explication pour
-clarifier le fonctionnement des ses fonctionnalités
-
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width=1\textwidth]{images/accueil.png}
+                \caption{Page d'accueil.}
+            \end{figure}
+            
+            \subsection{Page d'inscription}
+            
+            Si l'utilisateur choisit de s'inscrire, il sera redirigé vers l'interface
+	    d'inscription, où l'utilisateur sera amené à remplir un formulaire d'inscription
+	    en mentionnant son type au préalable, le système va vérifier la validité des informations
+	    saisies et les insèrent dans la base de données.
+            
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width=1\textwidth]{images/inscription.png}
+                \caption{Page de pré-inscription.}
+            \end{figure}
+            
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width=1\textwidth]{images/formulaire.png}
+                \caption{Formulaire d'inscription.}
+            \end{figure}
+            
+            \subsection{Interfaces côté client}
+            
+            L'interface principale du client se présente comme suit :
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width=1\textwidth]{images/client dash.png}
+                \caption{Interface principale du client.}
+            \end{figure}
+            
+            Depuis cette interface, le client pourra :
+            \begin{itemize}
+                \item Chercher des services selon un filtre;
+                \item Voir les messages échangés;
+                \item Voir les commandes effectuées et leur état;
+                \item Voir les avis précédemment laissés.
+            \end{itemize}
+            
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width=1\textwidth]{images/messages.png}
+                \caption{Interface des messages échangés.}
+            \end{figure}
+            
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width=1\textwidth]{images/services.png} 
+                \caption{Interface des services.}
+            \end{figure}
+            
+            Le client pourra consulter le contenu du service (Descriptions, images, tarifs)
+	    et pourra commander le service, contacter le fournisseur et laisser un avis.
+            
+             \begin{figure}[H]
+                \centering
+                \includegraphics[width=1\textwidth]{images/service consult.png} 
+                \caption{Interface des services.}
+            \end{figure}
+            
+            \subsection{Interface côté fournisseur}
+            
+            L'interface principale du fournisseur se présente comme suit :
+            
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width=1\textwidth]{images/fourni main.png} 
+                \caption{Interface côté Fournisseur.}
+            \end{figure}
+            
+            Le fournisseur pourra à travers cette interface : 
+            \begin{itemize}
+                \item Voir l'ensemble de ses services et en ajouter au besoin;
+                \item Gérer les commandes reçues;
+                \item Échanger des messages;
+                \item Voir quelques statistiques.
+                
+            \end{itemize}
+            
+            \subsection{Conclusion}
+            
+            Après le chapitre de l'analyse et de la conception, vient la 
+	    réalisation de l'application. Dans cette partie technique, 
+	    nous avons émit les outils et les environnements utilisé lors
+	    de la réalisation, ainsi que les différents langages de programmation.
+	    Puis, nous avons cité quelques fonctionnalités de notre application en
+	    s'appuyant sur des captures d'écran et quelques explications pour clarifier
+	    le fonctionnement des ses fonctionnalités.
+            
 %Fin du chapitre 3
 
 \section{Conclusion Générale}
@@ -1286,8 +1355,8 @@ En finissant par un troisième chapitre, où nous avons présenté les différen
 outils et langages de développement utilisés pour la réalisation de
 l'application, ainsi qu'une présentation de quelques interfaces de celle ci.
     
-Dans notre application, nous avons essayé de régler les différents problèmes
-que rencontrent les gens au quotidien; (\rmq{non, ce n'est pas vrai.})
+Dans notre applications, nous avons essayé de régler quelques problèmes que 
+rencontre les gens lors de la recherche de personnes compétentes :
 
 \begin{itemize}
     \item Manque d'informations préalables sur une personne.
