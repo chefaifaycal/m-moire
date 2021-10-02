@@ -614,57 +614,119 @@ pourrait ajouter.
         
 %Description Textuel du cas d'utilisation gestion de service
     \newpage
-        \item[Gestion de services] \hfill \newline \\
+        \item[Ajout de services] \hfill \newline \\
         \begin{minipage}{\linewidth}
         \centering
             \def\arraystretch{2}
             \begin{tabular}{|m{3cm}|m{9cm}|}
             \hline
-            Titre                & Gestion de services                                                                                                 \\ 
+            Titre                & Ajout de services  \\ 
             \hline
-            Résumé               & Le système offre la possibilité d'ajouter, modifier et supprimer un service \\ 
+            Résumé               & Le système offre la possibilité d'ajouter \\ 
             \hline
-            Acteurs              & - Fournisseur                                                                                    \\ 
+            Acteurs              & - Fournisseur  \\ 
             \hline
-            Pré conditions       & Authentification                                                                                                      \\ 
+            Pré conditions       & Authentification  \\ 
             \hline
             Scénario nominal     &  
                 1. L'utilisateur demande la page de la "Mes services". \newline
                 2. Le système affiche la page "Mes services". \newline
-                3. Si l'utilisateur veux ajouter un service :\newline
-                    3.a L'utilisateur clique sur le bouton "Ajouter un service". \newline
-                    3.b Le système affiche le formulaire d'ajout. \newline
-                    3.c L'utilisateur remplie le formulaire et le soumet. \newline
-                    3.d Le système vérifie la validité des données saisie et insère le service dans la base de donnée.\newline
-                4. Si l'utilisateur veux modifier un service : \newline
-                    4.a L'utilisateur clique sur le bouton de modification. \newline
-                    4.b Le système affiche un formulaire. \newline
-                    4.c L'utilisateur mentionne les nouvelle donnée et les soumet.\newline
-                    4.d Le système vérifie la validité des données saisie et insère le service\newline dans la base de donnée.\newline
-                5. Si l'utilisateur veux supprimer un service : \newline
-                    5.a L'utilisateur clique sur le bouton de suppression.\newline
-                    5.b Le système supprime le service de la base de données et affiche un message de succès.\newline
+                3. L'utilisateur clique sur le bouton "Ajouter un service". \newline
+                4. Le système affiche le formulaire d'ajout. \newline
+                5. L'utilisateur remplie le formulaire et le soumet. \newline
+                6. Le système vérifie la validité des données saisies et insère le service 
+		dans la base de donnée.\newline
+                
                 \\ 
             \hline
             Scénario alternatif &   
-                1. Authentification erronée, l'utilisateur est rediriger vers
-		le scénario nominale Numéro 03. \newline
-                4.  Les données saisie dans le formulaire son invalide.
+                6.  Les données saisies dans le formulaire son invalide.
 		Le système renvoie l'utilisateur vers le scénario nominale Numéro 4.\newline
-                5.  Les données saisie dans le formulaire son invalide. 
-		Le système renvoie l'utilisateur vers le scénario nominale Numéro 5.\newline
+                
+            \\ 
+            \hline
+            Post Conditions & 
+                - Le service ajouté s'affiche dans la page "Mes services".\newline
+            \\
+            \hline
+            \end{tabular}
+        \captionof{table}{Description textuel du cas d'utilisation Ajout de service}
+        \end{minipage}
+        
+        %Cas d'utilisation modification de services
+        \item[Modification de services] \hfill \newline \\
+        \begin{minipage}{\linewidth}
+        \centering
+            \def\arraystretch{2}
+            \begin{tabular}{|m{3cm}|m{9cm}|}
+            \hline
+            Titre                & Modification de services \\ 
+            \hline
+            Résumé               & Le système offre la possibilité de modifier un service \\ 
+            \hline
+            Acteurs              & - Fournisseur  \\ 
+            \hline
+            Pré conditions       & Authentification  \\ 
+            \hline
+            Scénario nominal     &  
+                1. L'utilisateur demande la page de la "Mes services". \newline
+                2. Le système affiche la page "Mes services". \newline
+                3. L'utilisateur clique sur le bouton de modification. \newline
+                4. Le système affiche un formulaire. \newline
+                5. L'utilisateur mentionne les nouvelle données et les soumet.\newline
+                6. Le système vérifie la validité des données saisies et insère le service\newline
+		dans la base de donnée.\newline
+                \\ 
+            \hline
+            Scénario alternatif &   
+                6.  Les données saisies dans le formulaire son invalide. 
+		Le système renvoie l'utilisateur vers le scénario nominale Numéro 4.\newline
                 
                 
             \\ 
             \hline
             Post Conditions & 
-                - Le service ajouter s'affiche dans la page "Mes services".\newline
-                - Les modifications effectuer s'affiche dans sur la page du service.\newline
-                - Le service supprimer n'est plus disponible sur la page "Mes services".  \newline
+                - Les modifications effectuées s'affiche dans sur la page du service.\newline
             \\
             \hline
             \end{tabular}
-        \captionof{table}{Description textuel du cas d'utilisation Commande de service}
+        \captionof{table}{Description textuel du cas d'utilisation Modification de service}
+        \end{minipage}
+        
+        %cas d'utilisation suppression de service
+        \newpage
+        \item[Suppression de services] \hfill \newline \\
+        \begin{minipage}{\linewidth}
+        \centering
+            \def\arraystretch{2}
+            \begin{tabular}{|m{3cm}|m{9cm}|}
+            \hline
+            Titre                & Suppression de services  \\ 
+            \hline
+            Résumé               & Le système offre la possibilité de supprimer un service \\ 
+            \hline
+            Acteurs              & - Fournisseur\\ 
+            \hline
+            Pré conditions       & Authentification  \\ 
+            \hline
+            Scénario nominal     &  
+                1. L'utilisateur demande la page de la "Mes services". \newline
+                2. Le système affiche la page "Mes services". \newline
+                3. L'utilisateur clique sur le bouton de suppression.\newline
+                4. Le système affiche une boite de dialogue pour confirmation. \newline
+                5. Le système supprime le service de la base de données et affiche un message de succès.\newline
+                \\ 
+            \hline
+            Scénario alternatif &   
+                Aucun
+            \\ 
+            \hline
+            Post Conditions & 
+                - Le service supprimé n'est plus disponible sur la page "Mes services".  \newline
+            \\
+            \hline
+            \end{tabular}
+        \captionof{table}{Description textuel du cas d'utilisation Suppression de service}
         \end{minipage}
     \end{description}
 
